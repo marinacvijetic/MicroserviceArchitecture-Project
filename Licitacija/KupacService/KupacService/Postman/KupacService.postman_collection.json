@@ -1,0 +1,634 @@
+{
+	"info": {
+		"_postman_id": "9ea9c31b-3c7d-425b-af07-1b96a38df04c",
+		"name": "KupacService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Kupac",
+			"item": [
+				{
+					"name": "GetAllKupci",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/kupci",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kupci"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetKupacByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/kupci/ef1623bf-7709-48b9-a3dc-1f4206ccf8d3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kupci",
+								"ef1623bf-7709-48b9-a3dc-1f4206ccf8d3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateKupac",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prioriteti\": [],\r\n    \"tipKupca\": 1,\r\n    \"ostvarenaPovrsina\": 50,\r\n    \"uplate\": [],\r\n    \"ovlascenaLica\": [],\r\n    \"imaZabranu\": true,\r\n    \"datumPocetkaZabrane\": \"0001-01-01T00:00:00\",\r\n    \"duzinaTrajanjaZabraneGodine\": 0,\r\n    \"datumPrestankaZabrane\": \"0001-01-01T00:00:00\",\r\n    \"javnaNadmetanja\": [],\r\n    \"adresa\": \"Valjevo\",\r\n    \"brojTelefona1\": \"123456\",\r\n    \"brojTelefona2\": null,\r\n    \"email\": null,\r\n    \"brojRacuna\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/kupci",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kupci"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateKupac",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kupacID\": \"ef1623bf-7709-48b9-a3dc-1f4206ccf8d3\",\r\n    \"prioriteti\": [],\r\n    \"tipKupca\": 1,\r\n    \"ostvarenaPovrsina\": 150,\r\n    \"uplate\": [],\r\n    \"ovlascenaLica\": [],\r\n    \"imaZabranu\": false,\r\n    \"datumPocetkaZabrane\": \"2022-01-01T00:00:00\",\r\n    \"duzinaTrajanjaZabraneGodine\": 1,\r\n    \"datumPrestankaZabrane\": \"2023-01-01T00:00:00\",\r\n    \"javnaNadmetanja\": [],\r\n    \"adresa\": null,\r\n    \"brojTelefona1\": null,\r\n    \"brojTelefona2\": null,\r\n    \"email\": null,\r\n    \"brojRacuna\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/kupci",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kupci"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteKupac",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/kupci/ef1623bf-7709-48b9-a3dc-1f4206ccf8d3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kupci",
+								"ef1623bf-7709-48b9-a3dc-1f4206ccf8d3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OvlascenoLice",
+			"item": [
+				{
+					"name": "GetAllOvlascenaLica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/ovlascenaLica",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"ovlascenaLica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOvlascenoLiceByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/ovlascenaLica/2d5eb676-78d6-4d9d-941b-5123a5859bdf",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"ovlascenaLica",
+								"2d5eb676-78d6-4d9d-941b-5123a5859bdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateOvlascenoLice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipOvlascenogLica\": 2,\r\n    \"ime\": \"Johanson\",\r\n    \"prezime\": \"Barbbery\",\r\n    \"adresa\": \"Sremska Mitrovica\",\r\n    \"kupci\": [],\r\n    \"brojeviTabla\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/ovlascenaLica",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"ovlascenaLica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOvlascenoLice",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"ovlascenoLiceID\": \"2d5eb676-78d6-4d9d-941b-5123a5859bdf\",\r\n        \"tipOvlascenogLica\": 2,\r\n        \"ime\": \"Marc\",\r\n        \"prezime\": \"john\",\r\n        \"adresa\": null,\r\n        \"kupci\": [],\r\n        \"brojeviTabla\": []\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/ovlascenaLica",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"ovlascenaLica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOvlascenoLice",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/ovlascenaLica/2d5eb676-78d6-4d9d-941b-5123a5859bdf",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"ovlascenaLica",
+								"2d5eb676-78d6-4d9d-941b-5123a5859bdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BrojTable",
+			"item": [
+				{
+					"name": "GetAllBrojeviTabla",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/brojTable",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"brojTable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBrojTableByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/brojTable/abd5b151-0751-4a54-8561-81406d942ceb",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"brojTable",
+								"abd5b151-0751-4a54-8561-81406d942ceb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBrojTable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"broj\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/brojTable",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"brojTable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBrojTable",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brojTableID\": \"abd5b151-0751-4a54-8561-81406d942ceb\",\r\n    \"broj\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/brojTable",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"brojTable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBrojTable",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/brojTable/abd5b151-0751-4a54-8561-81406d942ceb",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"brojTable",
+								"abd5b151-0751-4a54-8561-81406d942ceb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prioritet",
+			"item": [
+				{
+					"name": "GetAllPrioriteti",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/prioriteti",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"prioriteti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPrioritetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/prioriteti/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"prioriteti",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePrioritet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prioritetID\": 3,\r\n    \"prioritetIzbor\": \"Prioritet 3.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/prioriteti",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"prioriteti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePrioritet",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"prioritetID\": 3,\r\n        \"prioritetIzbor\": \"Vlasnik sistema za navodnjavanje i direktor opstine.\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/prioriteti",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"prioriteti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePrioritet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/prioriteti/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"prioriteti",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "KontaktOsoba",
+			"item": [
+				{
+					"name": "GetAllKontaktOsobe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/kontaktOsobe",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kontaktOsobe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetKontaktOsobuByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/kontaktOsobe/a1e4c8fd-7794-413f-a0df-0cfd061bd377",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kontaktOsobe",
+								"a1e4c8fd-7794-413f-a0df-0cfd061bd377"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateKontaktOsobu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ime\": \"Marija\",\r\n    \"prezime\": \"Jaksic\",\r\n    \"funkcija\": \"Funkcija5\",\r\n    \"telefon\": \"06254587\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/kontaktOsobe",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kontaktOsobe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateKontaktOsobu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kontaktOsobaID\": \"a1e4c8fd-7794-413f-a0df-0cfd061bd377\",\r\n    \"ime\": \"Tanja\",\r\n    \"prezime\": \"Plavsic\",\r\n    \"funkcija\": \"Funkcija8\",\r\n    \"telefon\": \"065824545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7000/api/kontaktOsobe",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kontaktOsobe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteKontaktOsobu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/api/kontaktOsobe/a1e4c8fd-7794-413f-a0df-0cfd061bd377",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"kontaktOsobe",
+								"a1e4c8fd-7794-413f-a0df-0cfd061bd377"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

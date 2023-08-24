@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Licitacija1</name>
+    </assembly>
+    <members>
+        <member name="M:Licitacija1.Auth.AuthHelper.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            konstruktor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Licitacija1.Auth.AuthHelper.Authorize(System.String)">
+            <summary>
+            Metoda za proveru prava pristupa
+            </summary>
+            <param name="key">Parametar koji se prosledjuje prilikom poziva zahteva, sluzi za autorizaciju.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.#ctor(Licitacija1.Data.ILicitacijaDokumentRepository,AutoMapper.IMapper,Licitacija1.Auth.IAuthHelper)">
+            <summary>
+            
+            </summary>
+            <param name="dokumentRepository"></param>
+            <param name="mapper"></param>
+            <param name="authHelper"></param>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.GetDokumenti">
+            <summary>
+            Vraca listu dokumenata
+            </summary>
+            <returns>Lista svih dokumenata</returns>
+            <remarks> 
+            Primer request-a \
+            GET 'https://localhost:4001/api/dokumenti' \
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.GetDokumentByID(System.Guid)">
+            <summary>
+            Vraca dokument sa specificiranim ID
+            </summary>
+            <param name="ID">Jedinstevni identifikator dokumenta</param>
+            <remarks>    
+            Primer request-a \
+            GET 'https://localhost:4001/api/dokumenti/' \
+                --param  'ID = 4f7c7ecd-49e7-4c39-8840-273954346524'
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.GetDokumentByLicitacijaID(System.Guid)">
+            <summary>
+            Vraca dokumenta sa specificiranim  ID-em Licitacije
+            </summary>
+            <param name="ID">Jedinstevni identifikator licitacije</param>
+            <remarks>    
+            Primer request-a \
+            GET 'https://localhost:4001/' \
+                --param  'ID = 3c5a441b-2ed4-4012-8377-6660b1994895'
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.CreateDokument(Licitacija1.DTOs.DokumentCreateDTO,System.String)">
+             <summary>
+             Pravi novi dokument
+             </summary>
+             <param name="dokumentCreateDTO">Model licitacije i dokumenta</param>
+             <param name="key">Authorization Key Value</param>
+             <remarks>
+             Primer request-a \
+             POST 'https://localhost:4001/api/dokumenti'\
+                 --header 'key: Bearer Nikola' \
+             Example: \
+             { \
+                      licitacijaId = 3c5a441b-2ed4-4012-8377-6660b1994895,
+                      "datum": "0001-01-01T00:00:00",
+                      vrstaPodnosiocaDokumenta = "F",
+                      NazivDokumenta = "Dokument1"
+            }
+             </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.UpdateLicitacijaDokument(Licitacija1.DTOs.DokumentUpdateDTO,System.String)">
+             <summary>
+             Vrsi azuriranje dokumenta
+             </summary>
+             <param name="dokument">Model licitacije i dokumenta</param>
+             <param name="key">Authorization Key Value</param>
+             <remarks>
+             Primer request-a \
+             POST 'https://localhost:4001/api/dokumenti'\
+                 --header 'key: Bearer Nikola' \
+             Example: \
+             { \
+                       "dokumentID": "1fcfb688-05ca-4304-8cd3-df3f79b8aeb6",
+                      licitacijaId = 6de0c4ee-8870-4649-a44b-921e5a7b2644,
+                      "datum": "0001-01-01T00:00:00",
+                      vrstaPodnosiocaDokumenta = "F",
+                      NazivDokumenta = "Dokument1"
+            }
+             </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.DokumentController.Delete(System.Guid,System.String)">
+            <summary>
+            Obrisi dokument
+            </summary>
+            <param name="dokumentID">Jedinstevni identifikator dokuenta</param>
+            <param name="key">Authorization Key Value</param>
+            <remarks>
+            Example of request \
+            DELETE 'https://localhost:4001/api/dokumenti/'\
+             --header 'key: Bearer Nikola' \
+             --param  'dokumentID = 1fcfb688-05ca-4304-8cd3-df3f79b8aeb6'\
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.LicitacijaContoller.GetLicitacije">
+            <summary>
+            Vraca listu licitacija
+            </summary>
+            <returns>Lista svih licitacija</returns>
+            <remarks> 
+            Primer request-a \
+            GET 'https://localhost:4001/api/licitacije' \
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.LicitacijaContoller.GetLicitacijaByID(System.Guid)">
+            <summary>
+            Vraca licitaciju sa specificiranim licitacijaID
+            </summary>
+            <param name="ID">Jedinstevni identifikator licitacije</param>
+            <remarks>    
+            Primer request-a \
+            GET 'https://localhost:4001/api/licitacije/' \
+                --param  'ID = dace9578-f369-4490-adbd-08db10e87c12'
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.LicitacijaContoller.CreateLicitacija(Licitacija1.DTOs.LicitacijaCreateDTO,System.String)">
+            <summary>
+            Pravi novu licitaciju
+            </summary>
+            <param name="licitacijaCreateDTO">Model licitacije</param>
+            <param name="key">Authorization Key Value</param>
+            <remarks>
+            Primer request-a \
+            PUT 'https://localhost:4001/api/licitacije/'\
+             --header 'key: Bearer Nikola' \
+            Example: \
+            { \
+                    licitacijaID = "a0045e28-fe2c-443c-6855-08db110df141"
+                    brojLicitacije = 1,
+                     goidna = 2019,
+                     ogranicenjeLicitacije = 1,
+                     korakCene = 1,
+                     datumLicitacije = "2019-01-02",
+                     rokZaDostavuPrijava = "2019-02-22"
+            } \
+            </remarks>
+            
+        </member>
+        <member name="M:Licitacija1.Controllers.LicitacijaContoller.UpdateLicitacija(Licitacija1.DTOs.LicitacijaUpdateDTO,System.String)">
+            <summary>
+            Vrsi azuriranje licitacije
+            </summary>
+            <param name="licit">Model licitacije</param>
+            <param name="key">Authorization Key Value</param>
+            <remarks>
+            Primer request-a \
+            PUT 'https://localhost:4001/api/licitacije/'\
+             --header 'key: Bearer Nikola' \
+            Example: \
+            { \
+                    licitacijaID = "a0045e28-fe2c-443c-6855-08db110df141"
+                    brojLicitacije = 1,
+                     goidna = 2019,
+                     ogranicenjeLicitacije = 1,
+                     korakCene = 1,
+                     datumLicitacije = "2019-01-02",
+                     rokZaDostavuPrijava = "2019-02-22"
+            } \
+            </remarks>
+        </member>
+        <member name="M:Licitacija1.Controllers.LicitacijaContoller.DeleteLicitacija(System.Guid,System.String)">
+            <summary>
+            Obrisi licitaciju
+            </summary>
+            <param name="licitacijaID">Jedinstevni identifikator liictacije</param>
+            <param name="key">Authorization Key Value</param>
+            <remarks>
+            Example of request \
+            DELETE 'https://localhost:4001/api/licitacije/'\
+             --header 'key: Bearer Nikola' \
+             --param  'licitacijaID = a0045e28-fe2c-443c-6855-08db110df141'\
+            </remarks>
+        </member>
+        <member name="T:Licitacija1.Data.AppDbContext">
+            <summary>
+            klasa AppDbContext
+            </summary>
+        </member>
+        <member name="M:Licitacija1.Data.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Licitacija1.Data.AppDbContext})">
+            <summary>
+            konstruktor AppDbContext        
+            /// </summary>
+            <param name="opt"></param>
+        </member>
+        <member name="M:Licitacija1.Data.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="M:Licitacija1.Data.PreparationDB.SeedData(Licitacija1.Data.AppDbContext)">
+            <summary>
+            Filling the database with data
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.DokumentCreateDTO">
+            <summary>
+            Klasa DokumentCreateDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentCreateDTO.licitacijaId">
+            <summary>
+            Identifikator licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentCreateDTO.dokumentId">
+            <summary>
+            Identifikator dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentCreateDTO.NazivDokumenta">
+            <summary>
+            naziv dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentCreateDTO.datum">
+            <summary>
+             datum
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentCreateDTO.vrstaPodnosiocaDokumenta">
+            P pravno lice, F fizicko lice
+        </member>
+        <member name="T:Licitacija1.DTOs.DokumentDTO">
+            <summary>
+            Klasa DokumentDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentDTO.dokumentID">
+            <summary>
+            Identifikator dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentDTO.LicitacijaID">
+            <summary>
+            Identifikator lictacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentDTO.NazivDokumenta">
+            <summary>
+            naziv dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentDTO.vrstaPodnosiocaDokumenta">
+            P pravno lice, F fizicko lice
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentDTO.datum">
+            <summary>
+             datum
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.DokumentUpdateDTO">
+            <summary>
+            klasa DokumentUpdateDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentUpdateDTO.dokumentId">
+            <summary>
+            Identifikator dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentUpdateDTO.LicitacijaID">
+            <summary>
+            Identifikator lictacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentUpdateDTO.NazivDokumenta">
+            <summary>
+            naziv dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentUpdateDTO.vrstaPodnosiocaDokumenta">
+            P pravno lice, F fizicko lice
+        </member>
+        <member name="P:Licitacija1.DTOs.DokumentUpdateDTO.datum">
+            <summary>
+             datum
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.JavnoNadmetanjeDTO">
+            <summary>
+            Klasa JavnoNadmetanjeDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.JavnoNadmetanjeId">
+            <summary>
+            ID javnog nadmetanja
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.Datum">
+            <summary>
+             Datum održavanja javnog nadmetanja
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.VremePocetka">
+            <summary>
+             Vreme početka javnog nadmetanja
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.VremeKraja">
+            <summary>
+             Vreme kraja javnog nadmetanja
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.PocetnaCenaPoHektaru">
+            <summary>
+            Početna cena zemljišta po hektaru
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.Izuzeto">
+            <summary>
+             Izuzeto javno nadmetanje
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.IzlicitiranaCena">
+            <summary>
+            Izlicitirana cena
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.PeriodZakupa">
+            <summary>
+            Vremenski period zakupa 
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.BrojUcesnika">
+            <summary>
+            Broj učesnika u javnom nadmetanju
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.VisinaDopuneDepozita">
+            <summary>
+            Visina dopune depozita
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.JavnoNadmetanjeDTO.Krug">
+            <summary>
+            Krug javnog nadmetanja 
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.LicitacijaConfirmationDTO">
+            <summary>
+            Klasa LicitacijaConfirmationDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaConfirmationDTO.brojLicitacije">
+            <summary>
+            broj licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaConfirmationDTO.goidna">
+            <summary>
+            godina licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaConfirmationDTO.datumLicitacije">
+            <summary>
+            datum licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaConfirmationDTO.ogranicenjeLicitacije">
+            <summary>
+            ogranicenje licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaConfirmationDTO.korakCene">
+            <summary>
+            korak cene licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaConfirmationDTO.rokZaDostavuPrijava">
+            <summary>
+            rok za dostavu licitacije
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.LicitacijaCreateDTO">
+            <summary>
+            Klasa LicitacijaCreateDTO
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.LicitacijaDTO">
+            <summary>
+            klasa LicitacijaDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.LicitacijaID">
+            <summary>
+            Identifikator licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.brojLicitacije">
+            <summary>
+            Godina licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.godina">
+            <summary>
+            Godina licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.datumLicitacije">
+            <summary>
+            Ogranicenje licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.ogranicenjeLicitacije">
+            <summary>
+            Ogranicenje licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.korakCene">
+            <summary>
+            Korak cene
+            </summary>
+        </member>
+        <member name="P:Licitacija1.DTOs.LicitacijaDTO.rokZaDostavuPrijava">
+            <summary>
+            Rok za dostavljanje dokumenata za prijavu
+            </summary>
+        </member>
+        <member name="T:Licitacija1.DTOs.LicitacijaUpdateDTO">
+            <summary>
+            klasa LicitacijaUpdateDTO
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.DokumentModel.datum">
+            <summary>
+            Datum podnosenja dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.DokumentModel.NazivDokumenta">
+            <summary>
+            Nziv Dokumenta
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.DokumentModel.vrstaPodnosiocaDokumenta">
+             <summary>
+             Indikator vrste podnosioca dokumenta
+            P pravno lice, F fizicko lice
+             </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.brojLicitacije">
+            <summary>
+            Broj licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.godina">
+            <summary>
+            Godina licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.datumLicitacije">
+            <summary>
+            Datum licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.ogranicenjeLicitacije">
+            <summary>
+            Ogranicenje licitacije
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.korakCene">
+            <summary>
+            Korak cene
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.rokZaDostavuPrijava">
+            <summary>
+            Rok za dostavljanje dokumenata za prijavu
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.dokumenti">
+            <summary>
+            Lista dokumentacije za pravna lica
+            </summary>
+        </member>
+        <member name="P:Licitacija1.Entities.LicitacijaModel.javnaNadmetanja">
+            <summary>
+            Lista javnih nadmetanja licitacije
+            </summary>
+        </member>
+    </members>
+</doc>

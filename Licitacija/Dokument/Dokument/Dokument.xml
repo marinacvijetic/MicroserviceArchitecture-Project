@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dokument</name>
+    </assembly>
+    <members>
+        <member name="M:Dokument.Auth.AuthHelper.Authorize(System.String)">
+            <summary>
+            Metoda za proveru prava pristupa
+            </summary>
+            <param name="key">Parametar koji se prosledjuje prilikom poziva zahteva, sluzi za autorizaciju.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dokument.Controllers.DokumentController.GetAllDokumenti">
+            <summary>
+            Prikaz svih dokumenata
+            </summary>
+            <returns>Lista dokumenata</returns>
+            <response code="200">Vraca sve dokumente</response>
+        </member>
+        <member name="M:Dokument.Controllers.DokumentController.GetDokumentById(System.Int32)">
+            <summary>
+            Prikaz odredjenog dokumenta
+            </summary>
+            <param name="DokumentID"></param>
+            <response code="200">Vraca dokument sa prosledjenim ID-jem</response>
+            <response code="204">Ako ne postoji dokument sa prosledjenim ID-jem</response>
+        </member>
+        <member name="M:Dokument.Controllers.DokumentController.CreateKorisnik(Dokument.Models.Dokument.DokumentDTOCreate,System.String)">
+            <summary>
+            Kreiranje novog dokumenta
+            </summary>
+            <returns>Vraca novokreirani dokument</returns>
+            <response code="201">Vraca novokreirani dokument</response>
+            <response code="401">Korisnik nije autorizovan</response>
+        </member>
+        <member name="M:Dokument.Controllers.DokumentController.UpdateDokument(Dokument.Models.Dokument.DokumentDTOUpdate,System.String)">
+            <summary>
+            Izmena postojeceg dokumenta
+            </summary>
+            /// <summary>
+            Izmena postojeceg korisnika
+            </summary>
+            <response code="200">Vraća ažurirani dokument</response>
+            <response code="401">Lice koje želi da izvrši ažuriranje nije autorizovani korisnik</response>
+            <response code="404">Nije pronađen dokument za ažuriranje</response>
+        </member>
+        <member name="M:Dokument.Controllers.DokumentController.DeleteDokument(System.Int32,System.String)">
+            <summary>
+            Brisanje postojeceg dokumenta
+            </summary>
+            <param name="DokumentID"></param>
+            <response code="404">Ne postoji dokument sa tim ID-jem</response>
+            <response code="200">Uspesno obrisan dokument</response>
+            <response code="401">Korisnik nije autorizovan</response>
+        </member>
+        <member name="M:Dokument.Controllers.UgovorOZakupuController.GetAllUgovori">
+            <summary>
+            Prikaz svih ugovora o zakupu
+            </summary>
+            <returns>Lista ugovora</returns>
+            <response code="200">Vraca sve ugovore</response>
+        </member>
+        <member name="M:Dokument.Controllers.UgovorOZakupuController.GetUgovorById(System.Guid)">
+            <summary>
+            Prikaz odredjenog ugovora
+            </summary>
+            <param name="UgovorOZakupuID"></param>
+            <response code="200">Vraca ugovor sa prosledjenim ID-jem</response>
+            <response code="204">Ako ne postoji ugovor sa prosledjenim ID-jem</response>
+        </member>
+        <member name="M:Dokument.Controllers.UgovorOZakupuController.CreateUgovor(Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate,System.String)">
+            <summary>
+            Kreiranje novog ugovora
+            </summary>
+            <returns>Vraca novokreirani ugovor</returns>
+            <response code="201">Vraca novokreirani ugovor</response>
+            <response code="401">Korisnik nije autorizovan</response>
+        </member>
+        <member name="M:Dokument.Controllers.UgovorOZakupuController.DeleteUgovor(System.Guid,System.String)">
+            <summary>
+            Brisanje postojeceg ugovora
+            </summary>
+            <param name="UgovorOZakupuID"></param>
+            <response code="404">Ne postoji ugovor sa tim ID-jem</response>
+            <response code="200">Uspesno obrisan ugovor</response>
+            <response code="401">Korisnik nije autorizovan</response>
+        </member>
+        <member name="M:Dokument.Controllers.UgovorOZakupuController.UpdateUgovor(Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate,System.String)">
+            <summary>
+            Izmena postojeceg ugovora
+            </summary>
+               /// <summary>
+            Izmena postojeceg dokumenta
+            </summary>
+            /// <summary>
+            Izmena postojeceg korisnika
+            </summary>
+            <response code="200">Vraća ažurirani ugovor</response>
+            <response code="401">Lice koje želi da izvrši ažuriranje nije autorizovani korisnik</response>
+            <response code="404">Nije pronađen ugovor za ažuriranje</response>
+        </member>
+        <member name="M:Dokument.Controllers.VerzijaDokumentaController.GetAllVerzije">
+            <summary>
+            Prikaz svih verzija dokumenta
+            </summary>
+            <response code="200">Vraca sve verzije</response>
+        </member>
+        <member name="M:Dokument.Controllers.VerzijaDokumentaController.GetVerzijaById(System.Guid)">
+            <summary>
+            Prikaz odredjene verzije dokumenta
+            </summary>
+            <param name="VerzijaID"></param>
+            <response code="200">Vraca verziju sa prosledjenim ID-jem</response>
+            <response code="204">Ako ne postoji verzija sa prosledjenim ID-jem</response>
+        </member>
+        <member name="M:Dokument.Controllers.VerzijaDokumentaController.CreateVerzija(Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOCreate,System.String)">
+            <summary>
+            Kreiranje nove verzije
+            </summary>
+            <returns>Vraca novokreiranu verziju</returns>
+            <response code="201">Vraca novokreiranu verziju</response>
+            <response code="401">Korisnik nije autorizovan</response>
+        </member>
+        <member name="M:Dokument.Controllers.VerzijaDokumentaController.DeleteVerzija(System.Guid,System.String)">
+            <summary>
+            Brisanje postojece verzije
+            </summary>
+            <param name="VerzijaID"></param>
+            <response code="404">Ne postoji verzija sa tim ID-jem</response>
+            <response code="200">Uspesno obrisana verzija</response>
+            <response code="401">Korisnik nije autorizovan</response>
+        </member>
+        <member name="M:Dokument.Controllers.VerzijaDokumentaController.UpdateVerzija(Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate,System.String)">
+            <summary>
+            Izmena postojece verzije dokumenta
+            </summary>
+            <response code="200">Vraća ažuriranu verziju dokumenta</response>
+            <response code="401">Lice koje želi da izvrši ažuriranje nije autorizovani korisnik</response>
+            <response code="404">Nije pronađena verzija dokumenta za ažuriranje</response>
+        </member>
+        <member name="T:Dokument.Entities.DokumentEntity">
+            <summary>
+            Predstavlja dokument
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.ZavodniBroj">
+            <summary>
+            Zavodni broj dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.Datum">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.DatumDonosenjaDokumenta">
+            <summary>
+            Datum donosenja dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.Sablon">
+            <summary>
+            Sablon dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.VerzijaDokumentaID">
+            <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.DokumentEntity.StatusDokumenta">
+            <summary>
+            Status dokumenta
+            </summary>
+        </member>
+        <member name="T:Dokument.Entities.StatusDokumentaEnum">
+            <summary>
+            Entitet status dokumenta koji je predstavljen enumeratorom
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.StatusDokumentaEnum.Usvojen">
+            <summary>
+            Status dokumenta usvojen
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.StatusDokumentaEnum.Odbijen">
+            <summary>
+            Status dokumenta odbijen
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.StatusDokumentaEnum.Otvoren">
+            <summary>
+            Status dokumenta otvoren
+            </summary>
+        </member>
+        <member name="T:Dokument.Entities.TipGarancijeEnum">
+            <summary>
+            Entitet tip garancije koji je predstavljen enumeratorom
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.TipGarancijeEnum.Jemstvo">
+            <summary>
+            Tip garancije Jemstvo
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.TipGarancijeEnum.Bankarska_garancija">
+            <summary>
+            Tip garancije Bankarska garancija
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.TipGarancijeEnum.Garancija_nekretninom">
+            <summary>
+            Tip garancije Garancija nekretnina
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.TipGarancijeEnum.Zirantska">
+            <summary>
+            Tip garancije Zirantska
+            </summary>
+        </member>
+        <member name="F:Dokument.Entities.TipGarancijeEnum.Uplata_gotovinom">
+            <summary>
+            Tip garancije Uplata gotovinom
+            </summary>
+        </member>
+        <member name="T:Dokument.Entities.UgovorOZakupuEntity">
+            <summary>
+            Predstavlja ugovor o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.UgovorOZakupuID">
+            <summary>
+            Identifikaciona oznaka ugovora o zakupu(primarni kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.JavnoNadmetanjeID">
+            <summary>
+            Identifikaciona oznaka jadnog nagmetanja (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.TipGarancije">
+            <summary>
+            Tip garancije za ugovor o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.KupacID">
+            <summary>
+            Identifikaciona oznaka kupca (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.RokDospeca">
+            <summary>
+            Rok dospeca
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.ZavodniBroj">
+            <summary>
+            Zavodni broj ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.DatumZavodjenja">
+            <summary>
+            Datum zavodjenja ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.LicnostID">
+            <summary>
+            Identifikaciona oznaka ministra (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.RokZaVracanje">
+            <summary>
+            Rok za vracanje
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.MestoPotpisivanja">
+            <summary>
+            Mesto potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.UgovorOZakupuEntity.DatumPotpisivanja">
+            <summary>
+            Datum potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="T:Dokument.Entities.VerzijaDokumentaEntity">
+            <summary>
+            Predstavlja verziju dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.VerzijaDokumentaEntity.VerzijaID">
+            <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.VerzijaDokumentaEntity.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.VerzijaDokumentaEntity.Verzija">
+            <summary>
+            Verzija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.VerzijaDokumentaEntity.Revizija">
+            <summary>
+            Revizija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Entities.VerzijaDokumentaEntity.Datum">
+            <summary>
+            Datum verzije
+            </summary>
+        </member>
+        <member name="T:Dokument.Models.Dokument.DokumentDTO">
+            <summary>
+            Predstavlja model dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.ZavodniBroj">
+            <summary>
+            Zavodni broj dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.Datum">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.DatumDonosenjaDokumenta">
+            <summary>
+            Datum donosenja dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.Sablon">
+            <summary>
+            Sablon dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.StatusDokumenta">
+            <summary>
+            Status dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTO.VerzijaDokumentaID">
+            /// <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="T:Dokument.Models.Dokument.DokumentDTOCreate">
+            <summary>
+            Predstavlja model dokumenta pri kreiranju
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOCreate.ZavodniBroj">
+            <summary>
+            Zavodni broj dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOCreate.Datum">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOCreate.DatumDonosenjaDokumenta">
+            <summary>
+            Datum donosenja dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOCreate.Sablon">
+            <summary>
+            Sablon dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOCreate.StatusDokumenta">
+            <summary>
+            Status dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOCreate.VerzijaDokumentaID">
+            <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.ZavodniBroj">
+            <summary>
+            Zavodni broj dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.Datum">
+            <summary>
+            Datum
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.DatumDonosenjaDokumenta">
+            <summary>
+            Datum donosenja dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.Sablon">
+            <summary>
+            Sablon dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.StatusDokumenta">
+            <summary>
+            Status dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.Dokument.DokumentDTOUpdate.VerzijaDokumentaID">
+            <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="T:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO">
+            <summary>
+            Predstavlja model ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.UgovorOZakupuID">
+            <summary>
+            Identifikaciona oznaka ugovora o zakupu(primarni kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.JavnoNadmetanjeID">
+            <summary>
+            Identifikaciona oznaka jadnog nagmetanja (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.TipGarancije">
+            <summary>
+            Tip garancije za ugovor o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.KupacID">
+            <summary>
+            Identifikaciona oznaka kupca (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.RokDospeca">
+            <summary>
+            Rok dospeca
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.ZavodniBroj">
+            <summary>
+            Zavodni broj ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.DatumZavodjenja">
+            <summary>
+            Datum zavodjenja ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.LicnostID">
+            <summary>
+            Identifikaciona oznaka ministra (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.RokZaVracanje">
+            <summary>
+            Rok za vracanje
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.MestoPotpisivanja">
+            <summary>
+            Mesto potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTO.DatumPotpisivanja">
+            <summary>
+            Datum potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.JavnoNadmetanjeID">
+            <summary>
+            Identifikaciona oznaka jadnog nagmetanja (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.TipGarancije">
+            <summary>
+            Tip garancije za ugovor o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.KupacID">
+            <summary>
+            Identifikaciona oznaka kupca (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.RokDospeca">
+            <summary>
+            Rok dospeca
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.ZavodniBroj">
+            <summary>
+            Zavodni broj ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.DatumZavodjenja">
+            <summary>
+            Datum zavodjenja ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.LicnostID">
+            <summary>
+            Identifikaciona oznaka ministra (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.RokZaVracanje">
+            <summary>
+            Rok za vracanje
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.MestoPotpisivanja">
+            <summary>
+            Mesto potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOCreate.DatumPotpisivanja">
+            <summary>
+            Datum potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.UgovorOZakupuID">
+            <summary>
+            Identifikaciona oznaka ugovora o zakupu(primarni kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.JavnoNadmetanjeID">
+            <summary>
+            Identifikaciona oznaka jadnog nagmetanja (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.TipGarancije">
+            <summary>
+            Tip garancije za ugovor o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.KupacID">
+            <summary>
+            Identifikaciona oznaka kupca (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.RokDospeca">
+            <summary>
+            Rok dospeca
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.ZavodniBroj">
+            <summary>
+            Zavodni broj ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.DatumZavodjenja">
+            <summary>
+            Datum zavodjenja ugovora o zakupu
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.LicnostID">
+            <summary>
+            Identifikaciona oznaka ministra (strani kljuc)
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.RokZaVracanje">
+            <summary>
+            Rok za vracanje
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.MestoPotpisivanja">
+            <summary>
+            Mesto potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.UgovorOZakupu.UgovorOZakupuDTOUpdate.DatumPotpisivanja">
+            <summary>
+            Datum potpisivanja ugovora
+            </summary>
+        </member>
+        <member name="T:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTO">
+            <summary>
+            Predstavlja model verzije dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTO.VerzijaID">
+            <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTO.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTO.Verzija">
+            <summary>
+            Verzija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTO.Revizija">
+            <summary>
+            Revizija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTO.Datum">
+            <summary>
+            Datum verzije dokumenta
+            </summary>
+        </member>
+        <member name="T:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOCreate">
+            <summary>
+            Predstavlja model verzije dokumenta prilikom kreiranja
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOCreate.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOCreate.Verzija">
+            <summary>
+            Verzija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOCreate.Revizija">
+            <summary>
+            Revizija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOCreate.Datum">
+            <summary>
+            Datum verzije dokumenta
+            </summary>
+        </member>
+        <member name="T:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate">
+            <summary>
+            Predstavlja model verzije dokumenta prilikom izmene
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate.VerzijaID">
+            <summary>
+            Identifikaciona oznaka verzije dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate.DokumentID">
+            <summary>
+            Identifikaciona oznaka dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate.Verzija">
+            <summary>
+            Verzija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate.Revizija">
+            <summary>
+            Revizija dokumenta
+            </summary>
+        </member>
+        <member name="P:Dokument.Models.VerzijaDokumenta.VerzijaDokumentaDTOUpdate.Datum">
+            <summary>
+            Datum verzije dokumenta
+            </summary>
+        </member>
+    </members>
+</doc>

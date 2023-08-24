@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "5c56c09b-2992-4af2-a146-855fe7325e0f",
+		"name": "Dokumenti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21468924"
+	},
+	"item": [
+		{
+			"name": "Dokument",
+			"item": [
+				{
+					"name": "GetAllDokumenti",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/dokumenti",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"dokumenti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDokumentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/dokumenti/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"dokumenti",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDokument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"zavodniBroj\": \"1A23\",\r\n        \"datum\": \"2022-11-20T00:00:00\",\r\n        \"datumDonosenjaDokumenta\": \"2022-11-21T09:00:00\",\r\n        \"sablon\": \" \",\r\n        \"statusDokumenta\": 2,\r\n        \"verzijaDokumentaID\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/dokumenti/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"dokumenti",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDokument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/dokumenti/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"dokumenti",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDokument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"dokumentID\": 2,\r\n        \"zavodniBroj\": \"123456\",\r\n        \"datum\": \"2020-11-17T09:00:00\",\r\n        \"datumDonosenjaDokumenta\": \"2020-11-17T09:00:00\",\r\n        \"sablon\": \"789123\",\r\n        \"statusDokumenta\": \"Odbijen\",\r\n        \"verzijaDokumentaID\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/dokumenti",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"dokumenti"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VerzijaDokumenta",
+			"item": [
+				{
+					"name": "CreateVerzija",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"dokumentID\": 0,\r\n        \"verzija\": \"1.1\",\r\n        \"revizija\": \" \",\r\n        \"datum\": \"2022-11-17T09:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/verzije/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"verzije",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetVerzijaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/verzije/8e6bb844-aeff-4458-96a8-08db10fda1f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"verzije",
+								"8e6bb844-aeff-4458-96a8-08db10fda1f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVerzija",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/verzije/4a7dcaaa-3fb5-44ca-96a9-08db10fda1f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"verzije",
+								"4a7dcaaa-3fb5-44ca-96a9-08db10fda1f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllVerzije",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/verzije",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"verzije"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateVerzija",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"verzijaID\": \"5a0d21f2-ef33-4c5e-241c-08db114b6a7a\",\r\n        \"dokumentID\": 0,\r\n        \"verzija\": \"1.12\",\r\n        \"revizija\": \" \",\r\n        \"datum\": \"2022-11-17T09:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/verzije",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"verzije"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UgovorOZakupu",
+			"item": [
+				{
+					"name": "GetAllUgovori",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/ugovori",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"ugovori"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUgovorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/ugovori/9e1081a1-885a-42fd-dc16-08db10fda210",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"ugovori",
+								"9e1081a1-885a-42fd-dc16-08db10fda210"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUgovor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5009/api/ugovori/9e1081a1-885a-42fd-dc16-08db10fda210",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"ugovori",
+								"9e1081a1-885a-42fd-dc16-08db10fda210"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUgovor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"javnoNadmetanjeID\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"dokumentID\": 0,\r\n        \"tipGarancije\": 2,\r\n        \"kupacID\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"rokDospeca\": 6,\r\n        \"zavodniBroj\": \" 345A12\",\r\n        \"datumZavodjenja\": \"2022-11-17T09:00:00\",\r\n        \"licnostID\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"rokZaVracanje\": \"2026-11-17T09:00:00\",\r\n        \"mestoPotpisivanja\": \"Novi Sad\",\r\n        \"datumPotpisivanja\": \"2020-11-17T09:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/ugovori/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"ugovori",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUgovor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Ana",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"ugovorOZakupuID\": \"9e1081a1-885a-42fd-dc16-08db10fda210\",\r\n        \"javnoNadmetanjeID\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"dokumentID\": 0,\r\n        \"tipGarancije\": \"Zirantska\",\r\n        \"kupacID\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"rokDospeca\": 15,\r\n        \"zavodniBroj\": \" 35JK11P\",\r\n        \"datumZavodjenja\": \"2020-11-17T09:00:00\",\r\n        \"licnostID\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"rokZaVracanje\": \"2020-11-17T09:00:00\",\r\n        \"mestoPotpisivanja\": \"Novi Sad\",\r\n        \"datumPotpisivanja\": \"2020-11-17T09:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5009/api/ugovori",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5009",
+							"path": [
+								"api",
+								"ugovori"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

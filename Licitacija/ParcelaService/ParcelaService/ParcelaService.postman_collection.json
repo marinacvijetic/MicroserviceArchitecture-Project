@@ -1,0 +1,4586 @@
+{
+	"info": {
+		"_postman_id": "d7d59c4a-f6ec-4fe8-a0a4-ee794a8d0dcd",
+		"name": "ParcelaService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Deo Parcele",
+					"item": [
+						{
+							"name": "{deo Parcele Id}",
+							"item": [
+								{
+									"name": "Vraća deo parcele sa unetim Id-jem",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele",
+												":deoParceleId"
+											],
+											"variable": [
+												{
+													"key": "deoParceleId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) Id dela parcele"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Vraća traženi deo parcele",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DeoParcele",
+														":deoParceleId"
+													],
+													"variable": [
+														{
+															"key": "deoParceleId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id dela parcele"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"deoParceleId\": \"d8e706c8-00ae-ab4c-319d-4e8f0d8595dc\",\n  \"parcelaId\": \"77753ed5-7170-40fd-03d1-a8e68c0bc388\",\n  \"redniBrojDelaParcele\": -85216093,\n  \"povrsinaDelaParcele\": 34126731,\n  \"kvalitetZеmljistaId\": \"ef0ccf22-45b8-94e3-2ccf-d291fb991583\"\n}"
+										},
+										{
+											"name": "Nije pronađena traženi deo parcele",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DeoParcele",
+														":deoParceleId"
+													],
+													"variable": [
+														{
+															"key": "deoParceleId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id dela parcele"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Brisanje dela parcele",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele",
+												":deoParceleId"
+											],
+											"variable": [
+												{
+													"key": "deoParceleId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID dela parcele"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Deo parcele uspešno obrisan",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DeoParcele",
+														":deoParceleId"
+													],
+													"variable": [
+														{
+															"key": "deoParceleId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID dela parcele"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Lice koje želi da izvrši brisanje nije autorizovani korisnik",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DeoParcele",
+														":deoParceleId"
+													],
+													"variable": [
+														{
+															"key": "deoParceleId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID dela parcele"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Nije pronađen deo parcele za brisanje",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DeoParcele",
+														":deoParceleId"
+													],
+													"variable": [
+														{
+															"key": "deoParceleId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID dela parcele"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Došlo je do greške na serveru prilikom brisanja dela parcele",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DeoParcele/:deoParceleId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DeoParcele",
+														":deoParceleId"
+													],
+													"variable": [
+														{
+															"key": "deoParceleId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID dela parcele"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Vraća sve delove parcele ili opciono sve delove parcele sa unetim Id-jem",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/DeoParcele",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DeoParcele"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu delova parcela",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele?parcelaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											],
+											"query": [
+												{
+													"key": "parcelaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"deoParceleId\": \"dc8bff67-e942-917f-651b-7fc4bc8d6f27\",\n    \"parcelaId\": \"0bda72e1-ec8b-6f76-911c-34c48949a91d\",\n    \"redniBrojDelaParcele\": -26370377,\n    \"povrsinaDelaParcele\": -26646832,\n    \"kvalitetZеmljistaId\": \"urn:uuid:c0e12d2f-38c7-1178-27e3-9d3bedca2f69\"\n  },\n  {\n    \"deoParceleId\": \"urn:uuid:3023d5ac-475b-4502-507f-937fe3e20295\",\n    \"parcelaId\": \"urn:uuid:c6961d20-309e-086e-08ee-bc1a4ebd08b6\",\n    \"redniBrojDelaParcele\": -53473073,\n    \"povrsinaDelaParcele\": -99290485,\n    \"kvalitetZеmljistaId\": \"urn:uuid:d0b1da03-8d5f-8b6d-27a9-272e43e0422e\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedan deo parcele",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele?parcelaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											],
+											"query": [
+												{
+													"key": "parcelaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Kreiranje novog dela parcele",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"parcelaId\": \"c7fd3491-c64c-7b96-2eb4-28871d1c59da\",\n  \"redniBrojDelaParcele\": 72402947,\n  \"povrsinaDelaParcele\": -94386962,\n  \"kvalitetZemljistaId\": \"urn:uuid:a8c047d2-9d2b-6f19-5891-0dd3a75b5cb0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/DeoParcele",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DeoParcele"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća kreirani deo parcele",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "AnaMarija"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"c7fd3491-c64c-7b96-2eb4-28871d1c59da\",\n  \"redniBrojDelaParcele\": 72402947,\n  \"povrsinaDelaParcele\": -94386962,\n  \"kvalitetZemljistaId\": \"urn:uuid:a8c047d2-9d2b-6f19-5891-0dd3a75b5cb0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"deoParceleId\": \"d8e706c8-00ae-ab4c-319d-4e8f0d8595dc\",\n  \"parcelaId\": \"77753ed5-7170-40fd-03d1-a8e68c0bc388\",\n  \"redniBrojDelaParcele\": -85216093,\n  \"povrsinaDelaParcele\": 34126731,\n  \"kvalitetZеmljistaId\": \"ef0ccf22-45b8-94e3-2ccf-d291fb991583\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši kreiranje dela parcele nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"c7fd3491-c64c-7b96-2eb4-28871d1c59da\",\n  \"redniBrojDelaParcele\": 72402947,\n  \"povrsinaDelaParcele\": -94386962,\n  \"kvalitetZemljistaId\": \"urn:uuid:a8c047d2-9d2b-6f19-5891-0dd3a75b5cb0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom kreiranja dela parcele",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"c7fd3491-c64c-7b96-2eb4-28871d1c59da\",\n  \"redniBrojDelaParcele\": 72402947,\n  \"povrsinaDelaParcele\": -94386962,\n  \"kvalitetZemljistaId\": \"urn:uuid:a8c047d2-9d2b-6f19-5891-0dd3a75b5cb0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Ažuriranje dela parcele",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"deoParceleId\": \"006781fe-04fc-d413-bf05-16d958aa5a02\",\n  \"parcelaId\": \"urn:uuid:6182376f-80fe-fadf-5c0c-db3b5df58b23\",\n  \"redniBrojDelaParcele\": -96631629,\n  \"povrsinaDelaParcele\": 31091876,\n  \"kvalitetZemljistaId\": \"94833210-bcf6-2fa1-d253-09f6d324e20d\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/DeoParcele",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DeoParcele"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća ažurirani deo parcele",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"deoParceleId\": \"006781fe-04fc-d413-bf05-16d958aa5a02\",\n  \"parcelaId\": \"urn:uuid:6182376f-80fe-fadf-5c0c-db3b5df58b23\",\n  \"redniBrojDelaParcele\": -96631629,\n  \"povrsinaDelaParcele\": 31091876,\n  \"kvalitetZemljistaId\": \"94833210-bcf6-2fa1-d253-09f6d324e20d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"deoParceleId\": \"778d4379-19b0-c492-c254-5423a57534fe\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši ažuriranje nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"deoParceleId\": \"006781fe-04fc-d413-bf05-16d958aa5a02\",\n  \"parcelaId\": \"urn:uuid:6182376f-80fe-fadf-5c0c-db3b5df58b23\",\n  \"redniBrojDelaParcele\": -96631629,\n  \"povrsinaDelaParcele\": 31091876,\n  \"kvalitetZemljistaId\": \"94833210-bcf6-2fa1-d253-09f6d324e20d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Nije pronađen deo parcele za ažuriranje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"deoParceleId\": \"006781fe-04fc-d413-bf05-16d958aa5a02\",\n  \"parcelaId\": \"urn:uuid:6182376f-80fe-fadf-5c0c-db3b5df58b23\",\n  \"redniBrojDelaParcele\": -96631629,\n  \"povrsinaDelaParcele\": 31091876,\n  \"kvalitetZemljistaId\": \"94833210-bcf6-2fa1-d253-09f6d324e20d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom ažuriranja dela parcele",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"deoParceleId\": \"006781fe-04fc-d413-bf05-16d958aa5a02\",\n  \"parcelaId\": \"urn:uuid:6182376f-80fe-fadf-5c0c-db3b5df58b23\",\n  \"redniBrojDelaParcele\": -96631629,\n  \"povrsinaDelaParcele\": 31091876,\n  \"kvalitetZemljistaId\": \"94833210-bcf6-2fa1-d253-09f6d324e20d\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća opcije za rad delovima parcele",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/DeoParcele",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DeoParcele"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/DeoParcele",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DeoParcele"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Dozvoljeni Rad",
+					"item": [
+						{
+							"name": "{dozvoljeni Rad Id}",
+							"item": [
+								{
+									"name": "Vrača dozvoljene radove po ID-ju",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad",
+												":dozvoljeniRadId"
+											],
+											"variable": [
+												{
+													"key": "dozvoljeniRadId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID dozvoljenog rada"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Vraća traženi dozvoljeni rad",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DozvoljeniRad",
+														":dozvoljeniRadId"
+													],
+													"variable": [
+														{
+															"key": "dozvoljeniRadId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID dozvoljenog rada"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"dozvoljeniRadId\": \"682a92b8-9b3b-bc47-f1d8-fe5c29819133\",\n  \"opis\": \"dolor id\",\n  \"zasticenaZonaId\": \"ea3b5907-4ae9-4003-9ab0-f49a3c6654e8\"\n}"
+										},
+										{
+											"name": "Nije pronađen traženi dozvoljeni rad",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DozvoljeniRad",
+														":dozvoljeniRadId"
+													],
+													"variable": [
+														{
+															"key": "dozvoljeniRadId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID dozvoljenog rada"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Brisanje dozvoljenog rada",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad",
+												":dozvoljeniRadId"
+											],
+											"variable": [
+												{
+													"key": "dozvoljeniRadId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) Id dozvoljenog rada"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Dozvoljeni rad uspešno obrisan",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DozvoljeniRad",
+														":dozvoljeniRadId"
+													],
+													"variable": [
+														{
+															"key": "dozvoljeniRadId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id dozvoljenog rada"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Lice koje želi da izvrši brisanje nije autorizovani korisnik",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DozvoljeniRad",
+														":dozvoljeniRadId"
+													],
+													"variable": [
+														{
+															"key": "dozvoljeniRadId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id dozvoljenog rada"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Nije pronađen dozvoljeni rad za brisanje",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DozvoljeniRad",
+														":dozvoljeniRadId"
+													],
+													"variable": [
+														{
+															"key": "dozvoljeniRadId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id dozvoljenog rada"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Došlo je do greške na serveru prilikom brisanja dozvoljenog rada",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/DozvoljeniRad/:dozvoljeniRadId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"DozvoljeniRad",
+														":dozvoljeniRadId"
+													],
+													"variable": [
+														{
+															"key": "dozvoljeniRadId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id dozvoljenog rada"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Vraća sve dozvoljene radove",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/DozvoljeniRad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DozvoljeniRad"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu dozvoljenih radova",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"dozvoljeniRadId\": \"bd5b8552-1c6b-ec0e-32d4-6f70a2c89719\",\n    \"opis\": \"amet\",\n    \"zasticenaZonaId\": \"31b5eee1-45bf-b39e-0898-7d4462351ee9\"\n  },\n  {\n    \"dozvoljeniRadId\": \"a4184bfd-62f2-1383-39b4-0aea6e29d683\",\n    \"opis\": \"dolore do ut aute\",\n    \"zasticenaZonaId\": \"02be2b66-ee7e-b3c4-456a-a2c9f7e716ee\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedan dozvoljeni rad",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Kreiranje novog dozvoljenog rada",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"opis\": \"mollit nulla ullamco id sit\",\n  \"zasticenaZonaId\": \"140eaa28-d460-c49e-19ec-b2b2aa680b5f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/DozvoljeniRad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DozvoljeniRad"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća kreirani dozvoljeni rad",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"opis\": \"mollit nulla ullamco id sit\",\n  \"zasticenaZonaId\": \"140eaa28-d460-c49e-19ec-b2b2aa680b5f\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"dozvoljeniRadId\": \"682a92b8-9b3b-bc47-f1d8-fe5c29819133\",\n  \"opis\": \"dolor id\",\n  \"zasticenaZonaId\": \"ea3b5907-4ae9-4003-9ab0-f49a3c6654e8\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši kreiranje dozvoljenog rada nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"opis\": \"mollit nulla ullamco id sit\",\n  \"zasticenaZonaId\": \"140eaa28-d460-c49e-19ec-b2b2aa680b5f\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom kreiranja dozvoljenog rada",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"opis\": \"mollit nulla ullamco id sit\",\n  \"zasticenaZonaId\": \"140eaa28-d460-c49e-19ec-b2b2aa680b5f\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Ažuriranje dozvoljenih radova",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dozvoljeniRadId\": \"1b24e5ec-cc7f-87d4-862f-aea532bc8d07\",\n  \"opis\": \"ci\",\n  \"zasticenaZonaId\": \"urn:uuid:01805bf0-89b5-7f6a-651b-32723079d558\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/DozvoljeniRad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DozvoljeniRad"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća ažuriran dozvoljeni rada",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dozvoljeniRadId\": \"1b24e5ec-cc7f-87d4-862f-aea532bc8d07\",\n  \"opis\": \"ci\",\n  \"zasticenaZonaId\": \"urn:uuid:01805bf0-89b5-7f6a-651b-32723079d558\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"dozvoljeniRadId\": \"9938b0ee-b600-1758-bc93-b95eb9142bfd\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši ažuriranje nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dozvoljeniRadId\": \"1b24e5ec-cc7f-87d4-862f-aea532bc8d07\",\n  \"opis\": \"ci\",\n  \"zasticenaZonaId\": \"urn:uuid:01805bf0-89b5-7f6a-651b-32723079d558\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Nije pronađen dozvoljeni rad za ažuriranje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dozvoljeniRadId\": \"1b24e5ec-cc7f-87d4-862f-aea532bc8d07\",\n  \"opis\": \"ci\",\n  \"zasticenaZonaId\": \"urn:uuid:01805bf0-89b5-7f6a-651b-32723079d558\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom ažuriranja dozvoljenog rada",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dozvoljeniRadId\": \"1b24e5ec-cc7f-87d4-862f-aea532bc8d07\",\n  \"opis\": \"ci\",\n  \"zasticenaZonaId\": \"urn:uuid:01805bf0-89b5-7f6a-651b-32723079d558\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća opcije za rad dozvoljenim radovima",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/DozvoljeniRad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"DozvoljeniRad"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/DozvoljeniRad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"DozvoljeniRad"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Kvalitet Zemljista",
+					"item": [
+						{
+							"name": "{kvalitet Zemljista Id}",
+							"item": [
+								{
+									"name": "Vraća kvalitet zemljišta sa unetim ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista",
+												":kvalitetZemljistaId"
+											],
+											"variable": [
+												{
+													"key": "kvalitetZemljistaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID kvaliteta zemljišta"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Vraća traženi kvalitet zemljišta",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"KvalitetZemljista",
+														":kvalitetZemljistaId"
+													],
+													"variable": [
+														{
+															"key": "kvalitetZemljistaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID kvaliteta zemljišta"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:c5569478-7582-316f-4115-fc5fb7f058c0\",\n  \"oznakaKvaliteta\": \"tempor en\",\n  \"opis\": \"veniam et dolore\"\n}"
+										},
+										{
+											"name": "Nije pronađen traženi kvalitet zemljišta",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"KvalitetZemljista",
+														":kvalitetZemljistaId"
+													],
+													"variable": [
+														{
+															"key": "kvalitetZemljistaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID kvaliteta zemljišta"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Brisanje kvaliteta zemljišta",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "AnaMarija",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista/870867d1-195f-4237-f3d5-08db1043e7a3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista",
+												"870867d1-195f-4237-f3d5-08db1043e7a3"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Kvalitet zemljišta uspešno obrisan",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"KvalitetZemljista",
+														":kvalitetZemljistaId"
+													],
+													"variable": [
+														{
+															"key": "kvalitetZemljistaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID kvaliteta zemljišta"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Lice koje želi da izvrši brisanje nije autorizovani korisnik",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"KvalitetZemljista",
+														":kvalitetZemljistaId"
+													],
+													"variable": [
+														{
+															"key": "kvalitetZemljistaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID kvaliteta zemljišta"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Nije pronađen kvalitet zemljišta  za brisanje",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"KvalitetZemljista",
+														":kvalitetZemljistaId"
+													],
+													"variable": [
+														{
+															"key": "kvalitetZemljistaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID kvaliteta zemljišta"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Došlo je do greške na serveru prilikom brisanja kvaliteta zemljišta",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/KvalitetZemljista/:kvalitetZemljistaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"KvalitetZemljista",
+														":kvalitetZemljistaId"
+													],
+													"variable": [
+														{
+															"key": "kvalitetZemljistaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID kvaliteta zemljišta"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Vraća sve kvalitete zemljišta",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/KvalitetZemljista",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"KvalitetZemljista"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu kvaliteta zemljišta",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"kvalitetZemljistaId\": \"fdecae93-e2fe-9230-48c9-ee6e977578c7\",\n    \"oznakaKvaliteta\": \"cupidatat sunt dolor esse\",\n    \"opis\": \"id ad\"\n  },\n  {\n    \"kvalitetZemljistaId\": \"6e1aa57c-a381-d1a4-6338-485830c16f39\",\n    \"oznakaKvaliteta\": \"deserunt ad incididunt\",\n    \"opis\": \"Lorem nulla\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedan kvalitet zemljišta",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Kreiranje novog kvaliteta zemljišta",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"oznakaKvaliteta\": \"test\",\n  \"opis\": \"testtesttest\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/KvalitetZemljista",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"KvalitetZemljista"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća kreirani kvalitet zemljišta",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"oznakaKvaliteta\": \"cillum in dolor est\",\n  \"opis\": \"labore quis ullamco\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:c5569478-7582-316f-4115-fc5fb7f058c0\",\n  \"oznakaKvaliteta\": \"tempor en\",\n  \"opis\": \"veniam et dolore\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši kreiranje kvaliteta zemljišta nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"oznakaKvaliteta\": \"cillum in dolor est\",\n  \"opis\": \"labore quis ullamco\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom kreiranja kvaliteta zemljišta",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"oznakaKvaliteta\": \"cillum in dolor est\",\n  \"opis\": \"labore quis ullamco\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Ažuriranje kvaliteta zemljišta",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:031ef001-9e6b-229d-0132-bd256dfb8866\",\n  \"oznakaKvaliteta\": \"occaecat veniam\",\n  \"opis\": \"eiusmod amet laborum dolor\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/KvalitetZemljista",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"KvalitetZemljista"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća ažurirani kvalitet zemljišta",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:031ef001-9e6b-229d-0132-bd256dfb8866\",\n  \"oznakaKvaliteta\": \"occaecat veniam\",\n  \"opis\": \"eiusmod amet laborum dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"kvalitetZemljistaId\": \"30616634-41d5-71a1-2e7d-717701b9a5a8\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši ažuriranje nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:031ef001-9e6b-229d-0132-bd256dfb8866\",\n  \"oznakaKvaliteta\": \"occaecat veniam\",\n  \"opis\": \"eiusmod amet laborum dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Nije pronađen kvalitet zemljišta za ažuriranje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:031ef001-9e6b-229d-0132-bd256dfb8866\",\n  \"oznakaKvaliteta\": \"occaecat veniam\",\n  \"opis\": \"eiusmod amet laborum dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom ažuriranja kvaliteta zemljišta",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"kvalitetZemljistaId\": \"urn:uuid:031ef001-9e6b-229d-0132-bd256dfb8866\",\n  \"oznakaKvaliteta\": \"occaecat veniam\",\n  \"opis\": \"eiusmod amet laborum dolor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća opcije za rad kvalitetima zemljišta",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/KvalitetZemljista",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"KvalitetZemljista"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/KvalitetZemljista",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"KvalitetZemljista"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Parcela",
+					"item": [
+						{
+							"name": "{parcela Id}",
+							"item": [
+								{
+									"name": "Vraća parcelu po ID-ju",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela",
+												":parcelaId"
+											],
+											"variable": [
+												{
+													"key": "parcelaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID parcele"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Vraća traženu parcelu",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"Parcela",
+														":parcelaId"
+													],
+													"variable": [
+														{
+															"key": "parcelaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID parcele"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"parcelaId\": \"urn:uuid:54a500ec-f7b4-26e1-2af7-185e47cef188\",\n  \"brojParcele\": \"commodo dolore\",\n  \"brojListaNepokretnosti\": \"reprehenderit id nostrud sunt Excepteur\",\n  \"katastarskaOpstinaId\": \"d0a524f4-acb3-88f6-5dbb-878a9d5c754f\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:f74538b9-16bd-9bc2-18c7-3489c8aa2e43\",\n  \"oblikSvojine\": 0,\n  \"kulturaStvarnoStanje\": \"incididunt in\",\n  \"obradivostStvarnoStanje\": \"dolor incididunt eiusmod nisi ut\",\n  \"odvodnjavanjeStvarnoStanje\": \"deserunt esse\"\n}"
+										},
+										{
+											"name": "Nije pronađena tražena parcela",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"Parcela",
+														":parcelaId"
+													],
+													"variable": [
+														{
+															"key": "parcelaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID parcele"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Brisanje parcele",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "AnaMarija",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela/90ff7b49-220d-4640-0ba5-08db10446619",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela",
+												"90ff7b49-220d-4640-0ba5-08db10446619"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Parcela uspešno obrisana",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"Parcela",
+														":parcelaId"
+													],
+													"variable": [
+														{
+															"key": "parcelaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id parcele"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Lice koje želi da izvrši brisanje nije autorizovani korisnik",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"Parcela",
+														":parcelaId"
+													],
+													"variable": [
+														{
+															"key": "parcelaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id parcele"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Nije pronađena parcela za brisanje",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"Parcela",
+														":parcelaId"
+													],
+													"variable": [
+														{
+															"key": "parcelaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id parcele"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Došlo je do greške na serveru prilikom brisanja parcele",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/Parcela/:parcelaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"Parcela",
+														":parcelaId"
+													],
+													"variable": [
+														{
+															"key": "parcelaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) Id parcele"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Vraća sve parcele ili opciono sve parcele koje pripadaju nekoj katastarskoj opštini",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/Parcela?katastarskaOpstinaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Parcela"
+									],
+									"query": [
+										{
+											"key": "katastarskaOpstinaId",
+											"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"description": "ID katastarske opštine"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu parcela",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela?katastarskaOpstinaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											],
+											"query": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"parcelaId\": \"5bf9516b-628e-f78f-7e40-839fdf8adfa7\",\n    \"brojParcele\": \"et exercitation\",\n    \"brojListaNepokretnosti\": \"de\",\n    \"katastarskaOpstinaId\": \"58b37b5f-1da4-e09b-82bb-f65920c0f761\",\n    \"kultura\": 0,\n    \"klasa\": 0,\n    \"obradivost\": 0,\n    \"zasticenaZonaId\": \"urn:uuid:e00cbb84-f701-62d9-763e-d3fccd4c4316\",\n    \"oblikSvojine\": 0,\n    \"kulturaStvarnoStanje\": \"adipisicing do sed\",\n    \"obradivostStvarnoStanje\": \"sit consectetur dolor qui\",\n    \"odvodnjavanjeStvarnoStanje\": \"Ut magna\"\n  },\n  {\n    \"parcelaId\": \"urn:uuid:ad0a2b5f-b46f-2732-c208-6cda35208f2a\",\n    \"brojParcele\": \"irure id\",\n    \"brojListaNepokretnosti\": \"dolor velit amet elit ut\",\n    \"katastarskaOpstinaId\": \"dc3621c0-ffa6-64ad-8461-d822a683ed12\",\n    \"kultura\": 0,\n    \"klasa\": 0,\n    \"obradivost\": 0,\n    \"zasticenaZonaId\": \"urn:uuid:af7d2403-5f77-d199-1fd5-ee6e6213ad84\",\n    \"oblikSvojine\": 0,\n    \"kulturaStvarnoStanje\": \"qui\",\n    \"obradivostStvarnoStanje\": \"eu do\",\n    \"odvodnjavanjeStvarnoStanje\": \"fugiat sed la\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedna parcela",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela?katastarskaOpstinaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											],
+											"query": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća sve parcele ili opciono sve parcele koje pripadaju nekoj katastarskoj opštini",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/Parcela?katastarskaOpstinaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Parcela"
+									],
+									"query": [
+										{
+											"key": "katastarskaOpstinaId",
+											"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"description": "ID katastarske opštine"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu parcela",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela?katastarskaOpstinaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											],
+											"query": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"parcelaId\": \"5bf9516b-628e-f78f-7e40-839fdf8adfa7\",\n    \"brojParcele\": \"et exercitation\",\n    \"brojListaNepokretnosti\": \"de\",\n    \"katastarskaOpstinaId\": \"58b37b5f-1da4-e09b-82bb-f65920c0f761\",\n    \"kultura\": 0,\n    \"klasa\": 0,\n    \"obradivost\": 0,\n    \"zasticenaZonaId\": \"urn:uuid:e00cbb84-f701-62d9-763e-d3fccd4c4316\",\n    \"oblikSvojine\": 0,\n    \"kulturaStvarnoStanje\": \"adipisicing do sed\",\n    \"obradivostStvarnoStanje\": \"sit consectetur dolor qui\",\n    \"odvodnjavanjeStvarnoStanje\": \"Ut magna\"\n  },\n  {\n    \"parcelaId\": \"urn:uuid:ad0a2b5f-b46f-2732-c208-6cda35208f2a\",\n    \"brojParcele\": \"irure id\",\n    \"brojListaNepokretnosti\": \"dolor velit amet elit ut\",\n    \"katastarskaOpstinaId\": \"dc3621c0-ffa6-64ad-8461-d822a683ed12\",\n    \"kultura\": 0,\n    \"klasa\": 0,\n    \"obradivost\": 0,\n    \"zasticenaZonaId\": \"urn:uuid:af7d2403-5f77-d199-1fd5-ee6e6213ad84\",\n    \"oblikSvojine\": 0,\n    \"kulturaStvarnoStanje\": \"qui\",\n    \"obradivostStvarnoStanje\": \"eu do\",\n    \"odvodnjavanjeStvarnoStanje\": \"fugiat sed la\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedna parcela",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela?katastarskaOpstinaId=urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											],
+											"query": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Kreiranje nove parcele",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"brojParcele\": \"commodo in quis dolore amet\",\n  \"brojListaNepokretnosti\": \"in labore qui\",\n  \"katastarskaOpstinaId\": \"urn:uuid:1d432cf1-d403-89ea-7e11-7672f6967b73\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:13104c25-b8d0-32d0-eb01-283dee9b499d\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"nostrud nisi\",\n  \"kulturaStvarnoStanje\": \"fugiat quis ad exercitation\",\n  \"klasaStvarnoStanje\": \"velit qui ipsum\",\n  \"obradivostStvarnoStanje\": \"consequat Ut anim d\",\n  \"zasticenaZonaStvarnoStanje\": \"labo\",\n  \"odvodnjavanjeStvarnoStanje\": \"voluptate ut nulla sed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Parcela",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Parcela"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća kreiranu parcele",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"brojParcele\": \"commodo in quis dolore amet\",\n  \"brojListaNepokretnosti\": \"in labore qui\",\n  \"katastarskaOpstinaId\": \"urn:uuid:1d432cf1-d403-89ea-7e11-7672f6967b73\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:13104c25-b8d0-32d0-eb01-283dee9b499d\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"nostrud nisi\",\n  \"kulturaStvarnoStanje\": \"fugiat quis ad exercitation\",\n  \"klasaStvarnoStanje\": \"velit qui ipsum\",\n  \"obradivostStvarnoStanje\": \"consequat Ut anim d\",\n  \"zasticenaZonaStvarnoStanje\": \"labo\",\n  \"odvodnjavanjeStvarnoStanje\": \"voluptate ut nulla sed\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"parcelaId\": \"urn:uuid:54a500ec-f7b4-26e1-2af7-185e47cef188\",\n  \"brojParcele\": \"commodo dolore\",\n  \"brojListaNepokretnosti\": \"reprehenderit id nostrud sunt Excepteur\",\n  \"katastarskaOpstinaId\": \"d0a524f4-acb3-88f6-5dbb-878a9d5c754f\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:f74538b9-16bd-9bc2-18c7-3489c8aa2e43\",\n  \"oblikSvojine\": 0,\n  \"kulturaStvarnoStanje\": \"incididunt in\",\n  \"obradivostStvarnoStanje\": \"dolor incididunt eiusmod nisi ut\",\n  \"odvodnjavanjeStvarnoStanje\": \"deserunt esse\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši kreiranje parcele nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"brojParcele\": \"commodo in quis dolore amet\",\n  \"brojListaNepokretnosti\": \"in labore qui\",\n  \"katastarskaOpstinaId\": \"urn:uuid:1d432cf1-d403-89ea-7e11-7672f6967b73\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:13104c25-b8d0-32d0-eb01-283dee9b499d\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"nostrud nisi\",\n  \"kulturaStvarnoStanje\": \"fugiat quis ad exercitation\",\n  \"klasaStvarnoStanje\": \"velit qui ipsum\",\n  \"obradivostStvarnoStanje\": \"consequat Ut anim d\",\n  \"zasticenaZonaStvarnoStanje\": \"labo\",\n  \"odvodnjavanjeStvarnoStanje\": \"voluptate ut nulla sed\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom kreiranja parcele",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"brojParcele\": \"commodo in quis dolore amet\",\n  \"brojListaNepokretnosti\": \"in labore qui\",\n  \"katastarskaOpstinaId\": \"urn:uuid:1d432cf1-d403-89ea-7e11-7672f6967b73\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:13104c25-b8d0-32d0-eb01-283dee9b499d\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"nostrud nisi\",\n  \"kulturaStvarnoStanje\": \"fugiat quis ad exercitation\",\n  \"klasaStvarnoStanje\": \"velit qui ipsum\",\n  \"obradivostStvarnoStanje\": \"consequat Ut anim d\",\n  \"zasticenaZonaStvarnoStanje\": \"labo\",\n  \"odvodnjavanjeStvarnoStanje\": \"voluptate ut nulla sed\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Ažuriranje parcele",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"parcelaId\": \"urn:uuid:aadc3143-fd7f-e6b2-b9cf-898240efb40c\",\n  \"brojParcele\": \"dolor minim nulla\",\n  \"brojListaNepokretnosti\": \"elit laborum\",\n  \"katastarskaOpstinaId\": \"05bb6024-e116-ca10-f5e6-58b513bff6b8\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:c6cafcbd-e1c6-d3f5-d718-8ae297a6d435\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"Ut nulla aliqua in ut\",\n  \"kulturaStvarnoStanje\": \"exercitation occaecat\",\n  \"klasaStvarnoStanje\": \"fug\",\n  \"obradivostStvarnoStanje\": \"aliqua ipsum\",\n  \"zasticenaZonaStvarnoStanje\": \"reprehenderit nostrud\",\n  \"odvodnjavanjeStvarnoStanje\": \"ex mollit commodo anim\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Parcela",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Parcela"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća ažuriranu parcelu",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"urn:uuid:aadc3143-fd7f-e6b2-b9cf-898240efb40c\",\n  \"brojParcele\": \"dolor minim nulla\",\n  \"brojListaNepokretnosti\": \"elit laborum\",\n  \"katastarskaOpstinaId\": \"05bb6024-e116-ca10-f5e6-58b513bff6b8\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:c6cafcbd-e1c6-d3f5-d718-8ae297a6d435\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"Ut nulla aliqua in ut\",\n  \"kulturaStvarnoStanje\": \"exercitation occaecat\",\n  \"klasaStvarnoStanje\": \"fug\",\n  \"obradivostStvarnoStanje\": \"aliqua ipsum\",\n  \"zasticenaZonaStvarnoStanje\": \"reprehenderit nostrud\",\n  \"odvodnjavanjeStvarnoStanje\": \"ex mollit commodo anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"parcelaId\": \"urn:uuid:2fd0430d-12fa-cf45-f1f7-d28d0228cbae\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši ažuriranje nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"urn:uuid:aadc3143-fd7f-e6b2-b9cf-898240efb40c\",\n  \"brojParcele\": \"dolor minim nulla\",\n  \"brojListaNepokretnosti\": \"elit laborum\",\n  \"katastarskaOpstinaId\": \"05bb6024-e116-ca10-f5e6-58b513bff6b8\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:c6cafcbd-e1c6-d3f5-d718-8ae297a6d435\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"Ut nulla aliqua in ut\",\n  \"kulturaStvarnoStanje\": \"exercitation occaecat\",\n  \"klasaStvarnoStanje\": \"fug\",\n  \"obradivostStvarnoStanje\": \"aliqua ipsum\",\n  \"zasticenaZonaStvarnoStanje\": \"reprehenderit nostrud\",\n  \"odvodnjavanjeStvarnoStanje\": \"ex mollit commodo anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Nije pronađena parcela za ažuriranje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"urn:uuid:aadc3143-fd7f-e6b2-b9cf-898240efb40c\",\n  \"brojParcele\": \"dolor minim nulla\",\n  \"brojListaNepokretnosti\": \"elit laborum\",\n  \"katastarskaOpstinaId\": \"05bb6024-e116-ca10-f5e6-58b513bff6b8\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:c6cafcbd-e1c6-d3f5-d718-8ae297a6d435\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"Ut nulla aliqua in ut\",\n  \"kulturaStvarnoStanje\": \"exercitation occaecat\",\n  \"klasaStvarnoStanje\": \"fug\",\n  \"obradivostStvarnoStanje\": \"aliqua ipsum\",\n  \"zasticenaZonaStvarnoStanje\": \"reprehenderit nostrud\",\n  \"odvodnjavanjeStvarnoStanje\": \"ex mollit commodo anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom ažuriranja parcele",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"parcelaId\": \"urn:uuid:aadc3143-fd7f-e6b2-b9cf-898240efb40c\",\n  \"brojParcele\": \"dolor minim nulla\",\n  \"brojListaNepokretnosti\": \"elit laborum\",\n  \"katastarskaOpstinaId\": \"05bb6024-e116-ca10-f5e6-58b513bff6b8\",\n  \"kultura\": 0,\n  \"klasa\": 0,\n  \"obradivost\": 0,\n  \"zasticenaZonaId\": \"urn:uuid:c6cafcbd-e1c6-d3f5-d718-8ae297a6d435\",\n  \"oblikSvojine\": 0,\n  \"odvodnjavanje\": \"Ut nulla aliqua in ut\",\n  \"kulturaStvarnoStanje\": \"exercitation occaecat\",\n  \"klasaStvarnoStanje\": \"fug\",\n  \"obradivostStvarnoStanje\": \"aliqua ipsum\",\n  \"zasticenaZonaStvarnoStanje\": \"reprehenderit nostrud\",\n  \"odvodnjavanjeStvarnoStanje\": \"ex mollit commodo anim\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća opcije za rad sa parcelama",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/Parcela",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Parcela"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća sve delove parcele čiji je ID prosleđen",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/Parcela/DeloviParcele/:parcelaId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Parcela",
+										"DeloviParcele",
+										":parcelaId"
+									],
+									"variable": [
+										{
+											"key": "parcelaId",
+											"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+											"description": "(Required) ID parcele"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu delova parcela",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela/DeloviParcele/:parcelaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela",
+												"DeloviParcele",
+												":parcelaId"
+											],
+											"variable": [
+												{
+													"key": "parcelaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID parcele"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"deoParceleId\": \"dc8bff67-e942-917f-651b-7fc4bc8d6f27\",\n    \"parcelaId\": \"0bda72e1-ec8b-6f76-911c-34c48949a91d\",\n    \"redniBrojDelaParcele\": -26370377,\n    \"povrsinaDelaParcele\": -26646832,\n    \"kvalitetZеmljistaId\": \"urn:uuid:c0e12d2f-38c7-1178-27e3-9d3bedca2f69\"\n  },\n  {\n    \"deoParceleId\": \"urn:uuid:3023d5ac-475b-4502-507f-937fe3e20295\",\n    \"parcelaId\": \"urn:uuid:c6961d20-309e-086e-08ee-bc1a4ebd08b6\",\n    \"redniBrojDelaParcele\": -53473073,\n    \"povrsinaDelaParcele\": -99290485,\n    \"kvalitetZеmljistaId\": \"urn:uuid:d0b1da03-8d5f-8b6d-27a9-272e43e0422e\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji lista delova parcele",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/Parcela/DeloviParcele/:parcelaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"Parcela",
+												"DeloviParcele",
+												":parcelaId"
+											],
+											"variable": [
+												{
+													"key": "parcelaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID parcele"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Zasticena Zona",
+					"item": [
+						{
+							"name": "{zasticena Zona Id}",
+							"item": [
+								{
+									"name": "Vraca zaštićenu zonu po ID-ju",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona",
+												":zasticenaZonaId"
+											],
+											"variable": [
+												{
+													"key": "zasticenaZonaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID zaštićene zone"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Vraća traženu zaštićenu zonu",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"ZasticenaZona",
+														":zasticenaZonaId"
+													],
+													"variable": [
+														{
+															"key": "zasticenaZonaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID zaštićene zone"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"zasticenaZonaId\": \"urn:uuid:f7c53ed6-5ce9-105b-ab7e-63b01cda0c6c\",\n  \"brojZasticeneZone\": -69457130\n}"
+										},
+										{
+											"name": "Nije pronađena tražena zaštićena zona",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"ZasticenaZona",
+														":zasticenaZonaId"
+													],
+													"variable": [
+														{
+															"key": "zasticenaZonaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID zaštićene zone"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Brisanje zaštićene zone",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona",
+												":zasticenaZonaId"
+											],
+											"variable": [
+												{
+													"key": "zasticenaZonaId",
+													"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+													"description": "(Required) ID zaštićene zone"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Zaštićena zona uspešno obrisana",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"ZasticenaZona",
+														":zasticenaZonaId"
+													],
+													"variable": [
+														{
+															"key": "zasticenaZonaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID zaštićene zone"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Lice koje želi da izvrši brisanje nije autorizovani korisnik",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"ZasticenaZona",
+														":zasticenaZonaId"
+													],
+													"variable": [
+														{
+															"key": "zasticenaZonaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID zaštićene zone"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Nije pronađena zaštićena zona za brisanje",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"ZasticenaZona",
+														":zasticenaZonaId"
+													],
+													"variable": [
+														{
+															"key": "zasticenaZonaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID zaštićene zone"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+										},
+										{
+											"name": "Došlo je do greške na serveru prilikom brisanja zaštićene zone",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "Duis amet elit"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/ZasticenaZona/:zasticenaZonaId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"ZasticenaZona",
+														":zasticenaZonaId"
+													],
+													"variable": [
+														{
+															"key": "zasticenaZonaId",
+															"value": "urn:uuid:a856906e-5da6-a786-8f80-2fdce9f4531a",
+															"description": "(Required) ID zaštićene zone"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Vraca sve zaštićene zone",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/ZasticenaZona",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"ZasticenaZona"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća listu zaštićenih zona",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"zasticenaZonaId\": \"urn:uuid:535c5fcf-44de-90e4-330a-66edd9f58b15\",\n    \"brojZasticeneZone\": -80097715\n  },\n  {\n    \"zasticenaZonaId\": \"c486832a-d77f-2724-8317-450107763484\",\n    \"brojZasticeneZone\": -97683878\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedna zaštićena zona",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Kreiranje nove zaštićene zone",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"brojZasticeneZone\": -3293411\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/ZasticenaZona",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"ZasticenaZona"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća kreiranu zaštićenu zonu",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"brojZasticeneZone\": -3293411\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"zasticenaZonaId\": \"urn:uuid:f7c53ed6-5ce9-105b-ab7e-63b01cda0c6c\",\n  \"brojZasticeneZone\": -69457130\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši kreiranje zaštićene zone nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"brojZasticeneZone\": -3293411\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom kreiranja zaštićene zone",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"brojZasticeneZone\": -3293411\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Ažuriranje zaštićene zone",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"zasticenaZonaId\": \"b674a361-a6ff-7889-bd3e-83087a811e9e\",\n  \"brojZasticeneZone\": 38194499\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/ZasticenaZona",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"ZasticenaZona"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraća ažuriranu zaštićenu zonu",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"zasticenaZonaId\": \"b674a361-a6ff-7889-bd3e-83087a811e9e\",\n  \"brojZasticeneZone\": 38194499\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"zasticenaZonaId\": \"urn:uuid:5ee5e945-88a4-d233-f640-c4d300d02c4f\"\n}"
+								},
+								{
+									"name": "Lice koje želi da izvrši ažuriranje nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"zasticenaZonaId\": \"b674a361-a6ff-7889-bd3e-83087a811e9e\",\n  \"brojZasticeneZone\": 38194499\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Nije pronađena zaštićena zona za ažuriranje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"zasticenaZonaId\": \"b674a361-a6ff-7889-bd3e-83087a811e9e\",\n  \"brojZasticeneZone\": 38194499\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"magna eu consequat nisi eius\",\n  \"title\": \"adipisicing sed officia est\",\n  \"status\": -67437761,\n  \"detail\": \"dolore\",\n  \"instance\": \"nulla fugiat\"\n}"
+								},
+								{
+									"name": "Došlo je do greške na serveru prilikom ažuriranja zaštićene zone",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "ključ sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "Duis amet elit"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"zasticenaZonaId\": \"b674a361-a6ff-7889-bd3e-83087a811e9e\",\n  \"brojZasticeneZone\": 38194499\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraća opcije za rad sa zaštićenim zonama",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/ZasticenaZona",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"ZasticenaZona"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/ZasticenaZona",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"ZasticenaZona"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

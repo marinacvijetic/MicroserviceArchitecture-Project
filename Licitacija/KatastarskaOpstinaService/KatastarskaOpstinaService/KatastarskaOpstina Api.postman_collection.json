@@ -1,0 +1,1735 @@
+{
+	"info": {
+		"_postman_id": "b88cd5f9-f53d-4b8c-97ca-0242979e61f4",
+		"name": "KatastarskaOpstina Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "KatastarskaOpstina Service",
+			"item": [
+				{
+					"name": "KatastarskaOpstina",
+					"item": [
+						{
+							"name": "GetAllKatastarskeOpstine",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"statutOpstineId\": \"86050f87-d8e7-416b-8cba-3b0c227b5618\",\r\n  \"nazivOpstine\": \"Pancevo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/katastarskaOpstina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"katastarskaOpstina"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca listu katastarskih opstina",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:6000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"katastarskaOpstinaId\": \"urn:uuid:caa8dc97-e288-a8b7-d1ed-840fe0a58de3\",\n    \"parcele\": [\n      {\n        \"parcelaId\": \"9501a100-fb6e-d6cd-8054-35e394b24788\",\n        \"brojParcele\": \"est nisi ullamco ut\",\n        \"brojListaNepokretnosti\": \"in tempor Excepteur Duis cupidatat\"\n      },\n      {\n        \"parcelaId\": \"urn:uuid:5be87128-d801-3f14-fced-63c11fa1defb\",\n        \"brojParcele\": \"minim velit dolore quis Duis\",\n        \"brojListaNepokretnosti\": \"nostrud consectetur esse\"\n      }\n    ],\n    \"statutOpstineId\": \"urn:uuid:6d60d6bb-656d-ea75-af04-ed4823462dfb\",\n    \"nazivOpstine\": \"sed velit non nulla deserunt\"\n  },\n  {\n    \"katastarskaOpstinaId\": \"urn:uuid:641a51b3-b340-c2b5-e4b5-b701eb7dd3ec\",\n    \"parcele\": [\n      {\n        \"parcelaId\": \"4d11042e-3b2d-043e-6366-a7121394097d\",\n        \"brojParcele\": \"pariatur amet exercitation\",\n        \"brojListaNepokretnosti\": \"laborum i\"\n      },\n      {\n        \"parcelaId\": \"urn:uuid:00d635c4-7289-06e9-2f1e-4d526b81b4ca\",\n        \"brojParcele\": \"dolor dolore\",\n        \"brojListaNepokretnosti\": \"enim qui ut sint est\"\n      }\n    ],\n    \"statutOpstineId\": \"urn:uuid:9856833c-f737-2209-7073-09226cea765e\",\n    \"nazivOpstine\": \"irure nisi sint pariatur\"\n  }\n]"
+								},
+								{
+									"name": "Ne postoji nijedna katastarska opstina",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "GetKatastarskaOpstinaById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/api/katastarskaOpstina/18991a06-5a78-4853-b335-70b6e81c2672",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"katastarskaOpstina",
+										"18991a06-5a78-4853-b335-70b6e81c2672"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Nije pronadjena trazena katastarska opstina",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina/:katastarskaOpstinaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina",
+												":katastarskaOpstinaId"
+											],
+											"variable": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:10789c4e-7d2c-7524-7a05-b5c1ed609a87",
+													"description": "(Required) ID katastarske opstine"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Vraca trazenu katastarsku opstina",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina/:katastarskaOpstinaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina",
+												":katastarskaOpstinaId"
+											],
+											"variable": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:10789c4e-7d2c-7524-7a05-b5c1ed609a87",
+													"description": "(Required) ID katastarske opstine"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"katastarskaOpstinaId\": \"acc3161a-600f-ba1a-080c-1d42bf3511e3\",\n  \"parcele\": [\n    {\n      \"parcelaId\": \"9cc7f7f8-83a5-80cb-b54c-04951a09a6cd\",\n      \"brojParcele\": \"sunt in non consectetur labore\",\n      \"brojListaNepokretnosti\": \"magna Lorem\"\n    },\n    {\n      \"parcelaId\": \"urn:uuid:0eff0a27-b430-2c9f-5686-7555df793a9e\",\n      \"brojParcele\": \"ea labore sed ex ad\",\n      \"brojListaNepokretnosti\": \"ullamco enim consequat laborum\"\n    }\n  ],\n  \"statutOpstineId\": \"urn:uuid:b06262eb-e90e-6dda-4792-ffb68241e0e1\",\n  \"nazivOpstine\": \"consecte\"\n}"
+								}
+							]
+						},
+						{
+							"name": "PostKatastarskaOpstina",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"parcele\": [],\r\n        \"statutOpstineId\": \"86050f87-d8e7-416b-8cba-3b0c227b5618\",\r\n        \"nazivOpstine\": \"Zrenjanin\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/katastarskaOpstina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"katastarskaOpstina"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca kreiranu katastarsku opstina",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nazivOpstine\": \"sint\",\n  \"statutOpstineId\": \"cff23e7c-9465-0045-c86d-dfb0f0d37a66\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"katastarskaOpstinaId\": \"acc3161a-600f-ba1a-080c-1d42bf3511e3\",\n  \"parcele\": [\n    {\n      \"parcelaId\": \"9cc7f7f8-83a5-80cb-b54c-04951a09a6cd\",\n      \"brojParcele\": \"sunt in non consectetur labore\",\n      \"brojListaNepokretnosti\": \"magna Lorem\"\n    },\n    {\n      \"parcelaId\": \"urn:uuid:0eff0a27-b430-2c9f-5686-7555df793a9e\",\n      \"brojParcele\": \"ea labore sed ex ad\",\n      \"brojListaNepokretnosti\": \"ullamco enim consequat laborum\"\n    }\n  ],\n  \"statutOpstineId\": \"urn:uuid:b06262eb-e90e-6dda-4792-ffb68241e0e1\",\n  \"nazivOpstine\": \"consecte\"\n}"
+								},
+								{
+									"name": "Lice koje zeli da izvrsi kreiranje katastarske opstine nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nazivOpstine\": \"sint\",\n  \"statutOpstineId\": \"cff23e7c-9465-0045-c86d-dfb0f0d37a66\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom kreiranja katastarske opstine",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nazivOpstine\": \"sint\",\n  \"statutOpstineId\": \"cff23e7c-9465-0045-c86d-dfb0f0d37a66\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "UpdateKatastarskaOpstina",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"katastarskaOpstinaId\": \"ba36d386-4162-4cb8-cdb9-08db104686a3\",\r\n    \"parcele\": [],\r\n    \"statutOpstineId\": \"86050f87-d8e7-416b-8cba-3b0c227b5618\",\r\n    \"nazivOpstine\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/katastarskaOpstina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"katastarskaOpstina"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Katastarska opstina azurirana",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"katastarskaOpstinaId\": \"1ec922c5-b0c5-be25-8702-4289f3112ef1\",\n  \"parcele\": [\n    {\n      \"parcelaId\": \"58a4918b-aa2c-9837-5259-73b32ea7133b\",\n      \"brojParcele\": \"officia\",\n      \"brojListaNepokretnosti\": \"in\"\n    },\n    {\n      \"parcelaId\": \"1f12a8a2-c7d2-a4a9-efd3-cdd4c7b7e80f\",\n      \"brojParcele\": \"laboru\",\n      \"brojListaNepokretnosti\": \"aliqua in id ut magna\"\n    }\n  ],\n  \"statutOpstineId\": \"c27f6bc5-76d3-0243-5582-c7e3018d31b6\",\n  \"nazivOpstine\": \"ea consectetur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"nazivOpstine\": \"sint\",\n  \"statutOpstineId\": \"cff23e7c-9465-0045-c86d-dfb0f0d37a66\"\n}"
+								},
+								{
+									"name": "Lice koje zeli da izvrsi brisanje katastarske opstine nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"katastarskaOpstinaId\": \"1ec922c5-b0c5-be25-8702-4289f3112ef1\",\n  \"parcele\": [\n    {\n      \"parcelaId\": \"58a4918b-aa2c-9837-5259-73b32ea7133b\",\n      \"brojParcele\": \"officia\",\n      \"brojListaNepokretnosti\": \"in\"\n    },\n    {\n      \"parcelaId\": \"1f12a8a2-c7d2-a4a9-efd3-cdd4c7b7e80f\",\n      \"brojParcele\": \"laboru\",\n      \"brojListaNepokretnosti\": \"aliqua in id ut magna\"\n    }\n  ],\n  \"statutOpstineId\": \"c27f6bc5-76d3-0243-5582-c7e3018d31b6\",\n  \"nazivOpstine\": \"ea consectetur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Nije pronadjena katastarska opstina za brisanje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"katastarskaOpstinaId\": \"1ec922c5-b0c5-be25-8702-4289f3112ef1\",\n  \"parcele\": [\n    {\n      \"parcelaId\": \"58a4918b-aa2c-9837-5259-73b32ea7133b\",\n      \"brojParcele\": \"officia\",\n      \"brojListaNepokretnosti\": \"in\"\n    },\n    {\n      \"parcelaId\": \"1f12a8a2-c7d2-a4a9-efd3-cdd4c7b7e80f\",\n      \"brojParcele\": \"laboru\",\n      \"brojListaNepokretnosti\": \"aliqua in id ut magna\"\n    }\n  ],\n  \"statutOpstineId\": \"c27f6bc5-76d3-0243-5582-c7e3018d31b6\",\n  \"nazivOpstine\": \"ea consectetur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja katastarske opstine",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"katastarskaOpstinaId\": \"1ec922c5-b0c5-be25-8702-4289f3112ef1\",\n  \"parcele\": [\n    {\n      \"parcelaId\": \"58a4918b-aa2c-9837-5259-73b32ea7133b\",\n      \"brojParcele\": \"officia\",\n      \"brojListaNepokretnosti\": \"in\"\n    },\n    {\n      \"parcelaId\": \"1f12a8a2-c7d2-a4a9-efd3-cdd4c7b7e80f\",\n      \"brojParcele\": \"laboru\",\n      \"brojListaNepokretnosti\": \"aliqua in id ut magna\"\n    }\n  ],\n  \"statutOpstineId\": \"c27f6bc5-76d3-0243-5582-c7e3018d31b6\",\n  \"nazivOpstine\": \"ea consectetur\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "DeleteKatastarskaOpstina",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/api/katastarskaOpstina/ba36d386-4162-4cb8-cdb9-08db104686a3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"katastarskaOpstina",
+										"ba36d386-4162-4cb8-cdb9-08db104686a3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Katastarska opstina uspesno obrisana",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina/:katastarskaOpstinaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina",
+												":katastarskaOpstinaId"
+											],
+											"variable": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:10789c4e-7d2c-7524-7a05-b5c1ed609a87",
+													"description": "(Required) ID katastarske opstine"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Lice koje zeli da izvrsi brisanje katastarske opstine nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina/:katastarskaOpstinaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina",
+												":katastarskaOpstinaId"
+											],
+											"variable": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:10789c4e-7d2c-7524-7a05-b5c1ed609a87",
+													"description": "(Required) ID katastarske opstine"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Nije pronadjena katastarska opstina za brisanje",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina/:katastarskaOpstinaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina",
+												":katastarskaOpstinaId"
+											],
+											"variable": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:10789c4e-7d2c-7524-7a05-b5c1ed609a87",
+													"description": "(Required) ID katastarske opstine"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja katastarske opstine",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija Bearer AnaMarija",
+												"key": "Authorization",
+												"value": "mollit Lorem adipisicing culpa"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina/:katastarskaOpstinaId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina",
+												":katastarskaOpstinaId"
+											],
+											"variable": [
+												{
+													"key": "katastarskaOpstinaId",
+													"value": "urn:uuid:10789c4e-7d2c-7524-7a05-b5c1ed609a87",
+													"description": "(Required) ID katastarske opstine"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Options",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6000/api/katastarskaOpstina",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"katastarskaOpstina"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/katastarskaOpstina",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"katastarskaOpstina"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "statut Opstine",
+					"item": [
+						{
+							"name": "{statut Opstine Id}",
+							"item": [
+								{
+									"name": "Get Statut By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:6000/api/statutOpstine/e167dcd6-d334-44fd-5c33-08db1047cc3c",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "6000",
+											"path": [
+												"api",
+												"statutOpstine",
+												"e167dcd6-d334-44fd-5c33-08db1047cc3c"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:5000/api/statutOpstine/:statutOpstineId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"statutOpstine",
+														":statutOpstineId"
+													],
+													"variable": [
+														{
+															"key": "statutOpstineId",
+															"value": "51f3d734-f119-6d4e-910e-7a4c8ce91b14",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"statutOpstineId\": \"urn:uuid:b3266955-8a62-d013-1fc4-e4161c43a7a9\",\n  \"sadrzajStatuta\": \"voluptate exercitation ut\",\n  \"datumKreiranjaStatuta\": \"1979-03-02T06:03:51.699Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Brisanje statuta opstine",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine/:statutOpstineId",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine",
+												":statutOpstineId"
+											],
+											"variable": [
+												{
+													"key": "statutOpstineId",
+													"value": "1122d9c6-a8dd-49fd-58ca-862b2d10df1d",
+													"description": "(Required) ID statuta opstine"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Statut opstine uspesno obrisan",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "sunt e"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/statutOpstine/:statutOpstineId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"statutOpstine",
+														":statutOpstineId"
+													],
+													"variable": [
+														{
+															"key": "statutOpstineId",
+															"value": "1122d9c6-a8dd-49fd-58ca-862b2d10df1d",
+															"description": "(Required) ID statuta opstine"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Lice koje zeli da izvrsi brisanje statuta opstine nije autorizovani korisnik",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "sunt e"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/statutOpstine/:statutOpstineId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"statutOpstine",
+														":statutOpstineId"
+													],
+													"variable": [
+														{
+															"key": "statutOpstineId",
+															"value": "1122d9c6-a8dd-49fd-58ca-862b2d10df1d",
+															"description": "(Required) ID statuta opstine"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+										},
+										{
+											"name": "Nije pronadjena statut opstine za brisanje",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "sunt e"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/statutOpstine/:statutOpstineId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"statutOpstine",
+														":statutOpstineId"
+													],
+													"variable": [
+														{
+															"key": "statutOpstineId",
+															"value": "1122d9c6-a8dd-49fd-58ca-862b2d10df1d",
+															"description": "(Required) ID statuta opstine"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+										},
+										{
+											"name": "Doslo je do greske na serveru prilikom brisanja statuta opstine",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+														"key": "Authorization",
+														"value": "sunt e"
+													}
+												],
+												"url": {
+													"raw": "http://localhost:5000/api/statutOpstine/:statutOpstineId",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "5000",
+													"path": [
+														"api",
+														"statutOpstine",
+														":statutOpstineId"
+													],
+													"variable": [
+														{
+															"key": "statutOpstineId",
+															"value": "1122d9c6-a8dd-49fd-58ca-862b2d10df1d",
+															"description": "(Required) ID statuta opstine"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/statutOpstine",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6000/api/statutOpstine",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"statutOpstine"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"statutOpstineId\": \"urn:uuid:065c8500-a0af-2f90-95f0-f34ec55cd703\",\n    \"sadrzajStatuta\": \"consectetur sit aute officia sed\",\n    \"datumKreiranjaStatuta\": \"1968-02-10T22:29:41.839Z\"\n  },\n  {\n    \"statutOpstineId\": \"urn:uuid:d02e2a95-6c98-07b7-eeca-7df7cddfc337\",\n    \"sadrzajStatuta\": \"labore\",\n    \"datumKreiranjaStatuta\": \"2006-06-29T20:51:44.596Z\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/statutOpstine",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/statutOpstine",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"statutOpstine"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"statutOpstineId\": \"urn:uuid:065c8500-a0af-2f90-95f0-f34ec55cd703\",\n    \"sadrzajStatuta\": \"consectetur sit aute officia sed\",\n    \"datumKreiranjaStatuta\": \"1968-02-10T22:29:41.839Z\"\n  },\n  {\n    \"statutOpstineId\": \"urn:uuid:d02e2a95-6c98-07b7-eeca-7df7cddfc337\",\n    \"sadrzajStatuta\": \"labore\",\n    \"datumKreiranjaStatuta\": \"2006-06-29T20:51:44.596Z\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Kreiranje novog statuta opstine",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sadrzajStatuta\": \"eu\",\n  \"datumKreiranjaStatuta\": \"1984-12-06T05:24:04.423Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/statutOpstine",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"statutOpstine"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vraca kreiran statut opstine",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: MajaCetic)",
+												"key": "Authorization",
+												"value": "mollit ullamco et eiusmod eu"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"sadrzajStatuta\": \"eu\",\n  \"datumKreiranjaStatuta\": \"1984-12-06T05:24:04.423Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"statutOpstineId\": \"urn:uuid:b3266955-8a62-d013-1fc4-e4161c43a7a9\",\n  \"sadrzajStatuta\": \"voluptate exercitation ut\",\n  \"datumKreiranjaStatuta\": \"1979-03-02T06:03:51.699Z\"\n}"
+								},
+								{
+									"name": "Lice koje zeli da izvrsi kreiranje statuta opstine nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: MajaCetic)",
+												"key": "Authorization",
+												"value": "mollit ullamco et eiusmod eu"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"sadrzajStatuta\": \"eu\",\n  \"datumKreiranjaStatuta\": \"1984-12-06T05:24:04.423Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom kreiranja stauta opstine",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: MajaCetic)",
+												"key": "Authorization",
+												"value": "mollit ullamco et eiusmod eu"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"sadrzajStatuta\": \"eu\",\n  \"datumKreiranjaStatuta\": \"1984-12-06T05:24:04.423Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Azuriranje statuta opstine",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "AnaMarija",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"statutOpstineId\": \"e167dcd6-d334-44fd-5c33-08db1047cc3c\",\n  \"sadrzajStatuta\": \"test\",\n  \"datumKreiranjaStatuta\": \"1988-07-25T19:29:13.303Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6000/api/statutOpstine",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6000",
+									"path": [
+										"api",
+										"statutOpstine"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Statut opstine azurirana",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "sunt e"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"statutOpstineId\": \"urn:uuid:38e74774-fc08-e5c0-6c81-251b7c2e5d78\",\n  \"sadrzajStatuta\": \"deserunt amet eiusmod velit\",\n  \"datumKreiranjaStatuta\": \"1988-07-25T19:29:13.303Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"sadrzajStatuta\": \"eu\",\n  \"datumKreiranjaStatuta\": \"1984-12-06T05:24:04.423Z\"\n}"
+								},
+								{
+									"name": "Lice koje zeli da izvrsi brisanje statuta opstine nije autorizovani korisnik",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "sunt e"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"statutOpstineId\": \"urn:uuid:38e74774-fc08-e5c0-6c81-251b7c2e5d78\",\n  \"sadrzajStatuta\": \"deserunt amet eiusmod velit\",\n  \"datumKreiranjaStatuta\": \"1988-07-25T19:29:13.303Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Nije pronadjen statut opstine za brisanje",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "sunt e"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"statutOpstineId\": \"urn:uuid:38e74774-fc08-e5c0-6c81-251b7c2e5d78\",\n  \"sadrzajStatuta\": \"deserunt amet eiusmod velit\",\n  \"datumKreiranjaStatuta\": \"1988-07-25T19:29:13.303Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"adipisicing ut aliqua\",\n  \"title\": \"et\",\n  \"status\": -23927455,\n  \"detail\": \"officia amet\",\n  \"instance\": \"laborum sint in\"\n}"
+								},
+								{
+									"name": "Doslo je do greske na serveru prilikom brisanja statuta opstine",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Kljuc sa kojim se proverava autorizacija(key vrednost: Bearer AnaMarija)",
+												"key": "Authorization",
+												"value": "sunt e"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"statutOpstineId\": \"urn:uuid:38e74774-fc08-e5c0-6c81-251b7c2e5d78\",\n  \"sadrzajStatuta\": \"deserunt amet eiusmod velit\",\n  \"datumKreiranjaStatuta\": \"1988-07-25T19:29:13.303Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Vraca opcije za rad sa statutom opstine",
+							"request": {
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/statutOpstine",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"statutOpstine"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/statutOpstine",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"statutOpstine"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

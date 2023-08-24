@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "81ed50f6-d9e6-4572-90e8-598b4b6f871d",
+		"name": "Licitacija",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21480678"
+	},
+	"item": [
+		{
+			"name": "Dokumenti",
+			"item": [
+				{
+					"name": "Get Dokumenti",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/dokumenti",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"dokumenti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dokument By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/dokumenti/4f7c7ecd-49e7-4c39-8840-273954346524",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"dokumenti",
+								"4f7c7ecd-49e7-4c39-8840-273954346524"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dokument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Nikola",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"licitacijaID\": \"3c5a441b-2ed4-4012-8377-6660b1994895\",\r\n        \"nazivDokumenta\": \"Dokument1\",\r\n        \"vrstaPodnosiocaDokumenta\": \"F\",\r\n        \"datum\": \"0001-01-01T00:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4001/api/dokumenti/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"dokumenti",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dokument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Nikola",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dokumentID\": \"4f7c7ecd-49e7-4c39-8840-273954346524\",\r\n    \"licitacijaID\": \"6de0c4ee-8870-4649-a44b-921e5a7b2644\",\r\n    \"nazivDokumenta\": \"dokument33\",\r\n    \"vrstaPodnosiocaDokumenta\": \"F\",\r\n    \"datum\": \"0001-01-01T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4001/api/dokumenti/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"dokumenti",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Dokument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Nikola",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/dokumenti/4f7c7ecd-49e7-4c39-8840-273954346524",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"dokumenti",
+								"4f7c7ecd-49e7-4c39-8840-273954346524"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dokumenti By LicitacijaID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/3c5a441b-2ed4-4012-8377-6660b1994895",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"3c5a441b-2ed4-4012-8377-6660b1994895"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Licitacije",
+			"item": [
+				{
+					"name": "Get Licitacije",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/licitacije",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"licitacije"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/licitacije/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"licitacije",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Licitacija",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Nikola",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"brojLicitacije\": 9009,\r\n        \"godina\": 19990,\r\n        \"datumLicitacije\": \"2020-11-15T09:00:00\",\r\n        \"ogranicenjeLicitacije\": 900,\r\n        \"korakCene\": 900,\r\n        \"rokZaDostavuPrijava\": \"2020-11-15T09:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4001/api/licitacije/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"licitacije",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Licitacija",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Nikola",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"licitacijaID\": \"6de0c4ee-8870-4649-a44b-921e5a7b2644\",\r\n        \"brojLicitacije\": 2111111,\r\n        \"godina\": 202110,\r\n        \"datumLicitacije\": \"2020-11-15T09:00:00\",\r\n        \"ogranicenjeLicitacije\": 5111,\r\n        \"korakCene\": 5,\r\n        \"rokZaDostavuPrijava\": \"2020-11-15T09:00:00\",\r\n        \"javnaNadmetanja\": []\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:4001/api/licitacije/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"licitacije",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Licitacija",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Nikola",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/licitacije/6de0c4ee-8870-4649-a44b-921e5a7b2644",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"licitacije",
+								"6de0c4ee-8870-4649-a44b-921e5a7b2644"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

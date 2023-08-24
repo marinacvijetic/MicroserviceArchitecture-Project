@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Korisnici</name>
+    </assembly>
+    <members>
+        <member name="M:Korisnici.Auth.AuthHelper.Authorize(System.String)">
+            <summary>
+            Metoda za proveru prava pristupa
+            </summary>
+            <param name="key">Parametar koji se prosledjuje prilikom poziva zahteva, sluzi za autorizaciju.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Korisnici.Controllers.KorisniciController.DeleteKorisnik(System.Int32,System.String)">
+            <summary>
+            hadkshskdsk
+            </summary>
+            <param name="KorisnikId"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Korisnici.Entities.KorisnikEntity">
+            <summary>
+            Predstavlja korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Entities.KorisnikEntity.KorisnikID">
+            <summary>
+            Primarni kljuc korisnika(identifikaciono obelezje)
+            </summary>
+        </member>
+        <member name="P:Korisnici.Entities.KorisnikEntity.Ime">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Entities.KorisnikEntity.Prezime">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Entities.KorisnikEntity.KorisnickoIme">
+            <summary>
+            Korisnicko ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Entities.KorisnikEntity.Lozinka">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Entities.KorisnikEntity.TipKorisnika">
+            <summary>
+            Tip kojem korisnik moze pripadati
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTO.KorisnikID">
+            <summary>
+            Identifikaciona oznaka korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTO.Ime">
+            <summary>
+            Ime korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTO.Prezime">
+            <summary>
+            Prezime korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTO.KorisnickoIme">
+            <summary>
+            Korisnicko ime korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTO.Lozinka">
+            <summary>
+            Lozinka korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTO.TipKorisnika">
+            <summary>
+            Naziv tipa korisnika(Operater, Superuser...).
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOCreate.Ime">
+            <summary>
+            Ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOCreate.Prezime">
+            <summary>
+            Prezime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOCreate.KorisnickoIme">
+            <summary>
+            Korisnicko ime korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOCreate.Lozinka">
+            <summary>
+            Lozinka korisnika
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOCreate.TipKorisnika">
+            <summary>
+            Naziv tipa korisnika(Operater, Superuser...)
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOUpdate.KorisnikID">
+            <summary>
+            Identifikaciona oznaka korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOUpdate.Ime">
+            <summary>
+            Ime korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOUpdate.Prezime">
+            <summary>
+            Prezime korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOUpdate.KorisnickoIme">
+            <summary>
+            Korisnicko ime korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOUpdate.Lozinka">
+            <summary>
+            Lozinka korisnika.
+            </summary>
+        </member>
+        <member name="P:Korisnici.Models.Korisnik.KorisnikDTOUpdate.TipKorisnika">
+            <summary>
+            Naziv tipa korisnika(Operater, Superuser...).
+            </summary>
+        </member>
+    </members>
+</doc>
